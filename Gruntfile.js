@@ -50,8 +50,12 @@ module.exports = function (grunt) {
                 tasks: ['newer:copy:styles', 'autoprefixer']
             },
             jade: {
-                files: ['{.tmp,<%= yeoman.app %>}/*.jade'],
+                files: ['{.tmp,<%= yeoman.app %>}/{,*/}*.jade'],
                 tasks: ['jade']
+            },
+            coffee: {
+                files: ['<%= yeoman.app %>/scripts/{,*/}*.coffee'],
+                tasks: ['copy:coffee', 'coffee:dist']
             },
             livereload: {
                 options: {
@@ -149,20 +153,20 @@ module.exports = function (grunt) {
             options: {
                 sassDir: '<%= yeoman.app %>/styles',
                 cssDir: '.tmp/styles',
-                generatedImagesDir: '.tmp/images/generated',
+                generatedImagesDir: '<%= yeoman.app %>/images',
                 imagesDir: '<%= yeoman.app %>/images',
                 javascriptsDir: '<%= yeoman.app %>/scripts',
                 fontsDir: '<%= yeoman.app %>/styles/fonts',
                 importPath: '<%= yeoman.app %>/bower_components',
                 httpImagesPath: '/images',
-                httpGeneratedImagesPath: '/images/generated',
+                httpGeneratedImagesPath: '/images/',
                 httpFontsPath: '/styles/fonts',
                 relativeAssets: false,
-                assetCacheBuster: false
+                assetCacheBuster: false,
             },
             dist: {
                 options: {
-                    generatedImagesDir: '<%= yeoman.dist %>/images/generated'
+                    generatedImagesDir: '<%= yeoman.dist %>/images'
                 }
             },
             server: {
@@ -298,6 +302,15 @@ module.exports = function (grunt) {
 
         // Copies remaining files to places other tasks can use
         copy: {
+            coffee: {
+                files: [{
+                    expand: true,
+                    dot: true,
+                    cwd: '<%= yeoman.app %>/scripts',
+                    dest: '.tmp/scripts',
+                    src: '**/*.coffee'
+                }]
+            },
             dist: {
                 files: [{
                     expand: true,
@@ -315,11 +328,21 @@ module.exports = function (grunt) {
                 }]
             },
             styles: {
-                expand: true,
-                dot: true,
-                cwd: '<%= yeoman.app %>/styles',
-                dest: '.tmp/styles/',
-                src: '{,*/}*.css'
+                files: [{
+                    expand: true,
+                    dot: true,
+                    cwd: '<%= yeoman.app %>/styles',
+                    dest: '.tmp/styles/',
+                    src: '{,*/}*.css'
+                },
+                /* Copy spreites too */
+                {
+                    expand: true,
+                    dot: true,
+                    cwd: '<%= yeoman.app %>/images',
+                    dest: '.tmp/images/',
+                    src: '*.png'
+                }]
             }
         },
 
@@ -341,14 +364,20 @@ module.exports = function (grunt) {
         concurrent: {
             server: [
                 'compass:server',
-                'copy:styles'
+                'copy:styles',
+                'copy:coffee',
+                'coffee:dist'
             ],
             test: [
-                'copy:styles'
+                'copy:styles',
+                'copy:coffee',
+                'coffee:dist'
             ],
             dist: [
                 'compass',
                 'copy:styles',
+                'copy:coffee',
+                'coffee:dist',
                 'imagemin',
                 'svgmin'
             ]
@@ -368,7 +397,23 @@ module.exports = function (grunt) {
                     ext: '.html'
                 }]
             }
-        }
+        },
+
+        // Compile coffeescript
+        coffee: {
+            dist: {
+                options: {
+                    sourceMap: true
+                },
+                files: [{
+                    expand: true,
+                    cwd: '<%= yeoman.app %>/scripts',
+                    src: '{,*/}*.coffee',
+                    dest: '.tmp/scripts',
+                    ext: '.js'
+                }]
+            }
+        },
     });
 
 

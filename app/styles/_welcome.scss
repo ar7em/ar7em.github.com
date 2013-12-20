@@ -1,0 +1,129 @@
+section.welcome {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    /* Radial gradient background */
+    background: #141226; /* Old browsers */
+    /* IE9 SVG, needs conditional override of 'filter' to 'none' */
+    background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPHJhZGlhbEdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgY3g9IjUwJSIgY3k9IjUwJSIgcj0iNzUlIj4KICAgIDxzdG9wIG9mZnNldD0iMCUiIHN0b3AtY29sb3I9IiMyOTM2NGMiIHN0b3Atb3BhY2l0eT0iMSIvPgogICAgPHN0b3Agb2Zmc2V0PSIxMDAlIiBzdG9wLWNvbG9yPSIjMTQxMjI2IiBzdG9wLW9wYWNpdHk9IjEiLz4KICA8L3JhZGlhbEdyYWRpZW50PgogIDxyZWN0IHg9Ii01MCIgeT0iLTUwIiB3aWR0aD0iMTAxIiBoZWlnaHQ9IjEwMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+    background: -moz-radial-gradient(center, ellipse cover,  #29364c 0%, #141226 100%); /* FF3.6+ */
+    background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%,#29364c), color-stop(100%,#141226)); /* Chrome,Safari4+ */
+    background: -webkit-radial-gradient(center, ellipse cover,  #29364c 0%,#141226 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-radial-gradient(center, ellipse cover,  #29364c 0%,#141226 100%); /* Opera 12+ */
+    background: -ms-radial-gradient(center, ellipse cover,  #29364c 0%,#141226 100%); /* IE10+ */
+    background: radial-gradient(ellipse at center,  #29364c 0%,#141226 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#29364c', endColorstr='#141226',GradientType=1 ); /* IE6-8 fallback on horizontal gradient */
+
+    .starfield {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+    }
+
+    .spaceship {
+        @include sprite-background("spaceship");
+        position: absolute;
+        top: 200px;
+        left: 10%;
+        z-index: 15;
+    }
+
+    .moon {
+        @include sprite-background("moon");
+        position: absolute;
+        top: 16px;
+        left: 50%;
+        z-index: 10;
+    }
+
+    .star img {
+        position: relative;
+        z-index: 5;
+    }
+
+    .small-star img {
+        position: relative;
+        z-index: 2;
+    }
+
+    .star-1 {
+        position: absolute;
+        top: 100px;
+        left: 10%;
+        height: 35px;
+    }
+
+    .star-2 {
+        position: absolute;
+        top: 39px;
+        left: 25%;
+        height: 50px;
+    }
+
+    .star-3 {
+        position: absolute;
+        top: 23px;
+        left: 30%;
+        height: 25px;
+    }
+    .star-4 {
+        position: absolute;
+        top: 230px;
+        left: 35%;
+    }
+
+    .star-5 {
+        position: absolute;
+        top: 170px;
+        left: 42%;
+        height:35px;
+    }
+
+    .star-6 {
+        position: absolute;
+        top: 90px;
+        left: 65%;
+        height:50px;
+    }
+
+    .star-7 {
+        position: absolute;
+        top: 60px;
+        left: 70%;
+        height:25px;
+    }
+
+    .star-8 {
+        position: absolute;
+        top: 250px;
+        left: 75%;
+    }
+
+    .star-9 {
+        position: absolute;
+        top: 180px;
+        left: 80%;
+        height: 55px;
+    }
+
+    .hanged {
+        .string {
+            position:absolute;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+        }
+
+        .string:before {
+            content: "";
+            display: block;
+            position: absolute;
+            bottom: 50%;
+            left: 50%;
+            border-right: 1px solid #322e53;
+            height: 10000px;
+            width: 1px;
+        }
+    }
+}
