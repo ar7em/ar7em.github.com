@@ -1,3 +1,20 @@
+$infinite-point-distance: 10000px;
+
+@mixin pendulum($type, $time) {
+    -moz-transform-origin: 50% (-$infinite-point-distance/50);
+    -moz-animation-duration: $time;
+    -moz-animation-name: pendulum-#{$type};
+    -moz-animation-iteration-count: infinite;
+    -webkit-transform-origin: 50% (-$infinite-point-distance/50);
+    -webkit-animation-duration: $time ;
+    -webkit-animation-name: pendulum-#{$type};
+    -webkit-animation-iteration-count: infinite;
+    transform-origin: 50% (-$infinite-point-distance/50);
+    animation-duration: $time;
+    animation-name: pendulum-#{$type};
+    animation-iteration-count: infinite;
+}
+
 section.welcome {
     position: relative;
     height: 100%;
@@ -15,26 +32,43 @@ section.welcome {
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#29364c', endColorstr='#141226',GradientType=1 ); /* IE6-8 fallback on horizontal gradient */
 
     .starfield {
+        @include no-bullets;
         position: relative;
         width: 100%;
         height: 100%;
         overflow: hidden;
+
+        li {
+            @include transition(-webkit-transform 0.1s ease-out 0,
+                                -moz-transform 0.1s ease-out 0,
+                                transform 0.1s ease-out 0);
+        }
     }
 
     .spaceship {
-        @include sprite-background("spaceship");
+        @include pendulum("spaceship", 2.79s);
         position: absolute;
         top: 200px;
         left: 10%;
-        z-index: 15;
+        z-index: 11;
+
+        img {
+            position: relative;
+            z-index: 15;
+        }
     }
 
     .moon {
-        @include sprite-background("moon");
+        @include pendulum("moon", 3.1s);
         position: absolute;
         top: 16px;
         left: 50%;
         z-index: 10;
+
+        img {
+            position: relative;
+            z-index: 14;
+        }
     }
 
     .star img {
@@ -48,6 +82,7 @@ section.welcome {
     }
 
     .star-1 {
+        @include pendulum("star-1", 2.99s);
         position: absolute;
         top: 100px;
         left: 10%;
@@ -55,6 +90,7 @@ section.welcome {
     }
 
     .star-2 {
+        @include pendulum("star-2", 3.79s);
         position: absolute;
         top: 39px;
         left: 25%;
@@ -62,18 +98,21 @@ section.welcome {
     }
 
     .star-3 {
+        @include pendulum("star-3", 3.19s);
         position: absolute;
         top: 23px;
         left: 30%;
         height: 25px;
     }
     .star-4 {
+        @include pendulum("star-4", 3.1s);
         position: absolute;
         top: 230px;
         left: 35%;
     }
 
     .star-5 {
+        @include pendulum("star-5", 2.8s);
         position: absolute;
         top: 170px;
         left: 42%;
@@ -81,6 +120,7 @@ section.welcome {
     }
 
     .star-6 {
+        @include pendulum("star-6", 3.6s);
         position: absolute;
         top: 90px;
         left: 65%;
@@ -88,6 +128,7 @@ section.welcome {
     }
 
     .star-7 {
+        @include pendulum("star-7", 3.2s);
         position: absolute;
         top: 60px;
         left: 70%;
@@ -95,12 +136,14 @@ section.welcome {
     }
 
     .star-8 {
+        @include pendulum("star-8", 2.7s);
         position: absolute;
         top: 250px;
         left: 75%;
     }
 
     .star-9 {
+        @include pendulum("star-9", 2.9s);
         position: absolute;
         top: 180px;
         left: 80%;
@@ -108,22 +151,108 @@ section.welcome {
     }
 
     .hanged {
-        .string {
-            position:absolute;
-            width: 100%;
-            height: 100%;
-            z-index: 1;
-        }
 
-        .string:before {
+        &:before, &:after {
             content: "";
             display: block;
             position: absolute;
             bottom: 50%;
             left: 50%;
-            border-right: 1px solid #322e53;
-            height: 10000px;
+            border-right: 1px dotted #383764;
+            height: $infinite-point-distance;
             width: 1px;
+            margin-left: -1px;
+            z-index: 1;
         }
+
+        &.double:before, &.double:after {
+            border-color: #474580;
+        }
+
+        &.double:before {
+            left: 23%;
+            bottom: 54%;
+        }
+
+        &.double:after {
+            left: auto;
+            right: 27%;
+            bottom: 92%;
+            z-index: 1;
+        }
+    }
+}
+
+/* Spaceship rotation style */
+@-moz-keyframes pendulum-spaceship {
+    from { -moz-transform: rotate(-1deg); }
+    50%  { -moz-transform: rotate(1deg); }
+    to   { -moz-transform: rotate(-1deg); }
+}
+@-webkit-keyframes pendulum-spaceship {
+    from { -webkit-transform: rotate(-1deg); }
+    50%  { -webkit-transform: rotate(1deg); }
+    to   { -webkit-transform: rotate(-1deg); }
+}
+@keyframes pendulum-spaceship {
+    from { transform: rotate(-1deg); }
+    50%  { transform: rotate(1deg); }
+    to   { transform: rotate(-1deg); }
+}
+
+/* Moon rotation animation */
+
+@-moz-keyframes pendulum-moon {
+    from { -moz-transform: rotate(-0.98deg); }
+    50%  { -moz-transform: rotate(0.98deg); }
+    to   { -moz-transform: rotate(-0.98deg); }
+}
+@-webkit-keyframes pendulum-moon {
+    from { -webkit-transform: rotate(-0.98deg); }
+    50%  { -webkit-transform: rotate(0.98deg); }
+    to   { -webkit-transform: rotate(-0.98deg); }
+}
+@keyframes pendulum-moon {
+    from { transform: rotate(-0.98deg); }
+    50%  { transform: rotate(0.98deg); }
+    to   { transform: rotate(-0.98deg); }
+}
+
+/* Generate rotation style for each star */
+
+@-moz-keyframes pendulum-moon {
+    from { -moz-transform: rotate(-0.98deg); }
+    50%  { -moz-transform: rotate(0.98deg); }
+    to   { -moz-transform: rotate(-0.98deg); }
+}
+@-webkit-keyframes pendulum-moon {
+    from { -webkit-transform: rotate(-0.98deg); }
+    50%  { -webkit-transform: rotate(0.98deg); }
+    to   { -webkit-transform: rotate(-0.98deg); }
+}
+@keyframes pendulum-moon {
+    from { transform: rotate(-0.98deg); }
+    50%  { transform: rotate(0.98deg); }
+    to   { transform: rotate(-0.98deg); }
+}
+
+/* Stars rotation styles */
+$starsRotation: 0.97, 1.01, 1, 1.05, 1.2, 0.99, 0.9, 0.95, 0.98;
+
+@for $i from 1 through 9 {
+    @-moz-keyframes pendulum-star-#{$i} {
+        from { -moz-transform: rotate(-#{nth($starsRotation, $i)}deg); }
+        50%  { -moz-transform: rotate(#{nth($starsRotation, $i)}deg); }
+        to   { -moz-transform: rotate(-#{nth($starsRotation, $i)}deg); }
+    }
+    @-webkit-keyframes pendulum-star-#{$i} {
+        from { -webkit-transform: rotate(-#{nth($starsRotation, $i)}deg); }
+        50%  { -webkit-transform: rotate(#{nth($starsRotation, $i)}deg); }
+        to   { -webkit-transform: rotate(-#{nth($starsRotation ,$i)}deg); }
+    }
+    @keyframes pendulum-star-#{$i} {
+        from { transform: rotate(-#{nth($starsRotation, $i)}deg); }
+        50%  { transform: rotate(#{nth($starsRotation, $i)}deg); }
+        to   { transform: rotate(-#{nth($starsRotation, $i)}deg); }
     }
 }

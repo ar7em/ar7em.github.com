@@ -1,8 +1,8 @@
 $(document).ready ->
-	$('#parallaxScene').parallax
-		limitX: false
-		limitY: false
-		scalarX: 5
-		scalarY: 3
-		frictionX: 1
-		frictionY: 1
+    $('#parallaxScene').parallax
+        limitX: false
+        limitY: false
+        scalarX: 7
+        scalarY: 5
+        frictionX: 1
+        frictionY: 1
