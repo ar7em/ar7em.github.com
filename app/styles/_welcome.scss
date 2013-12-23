@@ -20,36 +20,130 @@ section.welcome {
     height: 100%;
     width: 100%;
     /* Radial gradient background */
-    background: #141226; /* Old browsers */
+    background: #1a2230; /* Old browsers */
     /* IE9 SVG, needs conditional override of 'filter' to 'none' */
-    background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPHJhZGlhbEdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgY3g9IjUwJSIgY3k9IjUwJSIgcj0iNzUlIj4KICAgIDxzdG9wIG9mZnNldD0iMCUiIHN0b3AtY29sb3I9IiMyOTM2NGMiIHN0b3Atb3BhY2l0eT0iMSIvPgogICAgPHN0b3Agb2Zmc2V0PSIxMDAlIiBzdG9wLWNvbG9yPSIjMTQxMjI2IiBzdG9wLW9wYWNpdHk9IjEiLz4KICA8L3JhZGlhbEdyYWRpZW50PgogIDxyZWN0IHg9Ii01MCIgeT0iLTUwIiB3aWR0aD0iMTAxIiBoZWlnaHQ9IjEwMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
-    background: -moz-radial-gradient(center, ellipse cover,  #29364c 0%, #141226 100%); /* FF3.6+ */
-    background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%,#29364c), color-stop(100%,#141226)); /* Chrome,Safari4+ */
-    background: -webkit-radial-gradient(center, ellipse cover,  #29364c 0%,#141226 100%); /* Chrome10+,Safari5.1+ */
-    background: -o-radial-gradient(center, ellipse cover,  #29364c 0%,#141226 100%); /* Opera 12+ */
-    background: -ms-radial-gradient(center, ellipse cover,  #29364c 0%,#141226 100%); /* IE10+ */
-    background: radial-gradient(ellipse at center,  #29364c 0%,#141226 100%); /* W3C */
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#29364c', endColorstr='#141226',GradientType=1 ); /* IE6-8 fallback on horizontal gradient */
+    background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPHJhZGlhbEdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgY3g9IjUwJSIgY3k9IjUwJSIgcj0iNzUlIj4KICAgIDxzdG9wIG9mZnNldD0iMCUiIHN0b3AtY29sb3I9IiMxYTIyMzAiIHN0b3Atb3BhY2l0eT0iMSIvPgogICAgPHN0b3Agb2Zmc2V0PSIxMDAlIiBzdG9wLWNvbG9yPSIjMDUwNDBhIiBzdG9wLW9wYWNpdHk9IjEiLz4KICA8L3JhZGlhbEdyYWRpZW50PgogIDxyZWN0IHg9Ii01MCIgeT0iLTUwIiB3aWR0aD0iMTAxIiBoZWlnaHQ9IjEwMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+    background: -moz-radial-gradient(center, ellipse cover, #1a2230 0%, #05040a 100%); /* FF3.6+ */
+    background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%,#1a2230), color-stop(100%,#05040a)); /* Chrome,Safari4+ */
+    background: -webkit-radial-gradient(center, ellipse cover, #1a2230 0%,#05040a 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-radial-gradient(center, ellipse cover, #1a2230 0%,#05040a 100%); /* Opera 12+ */
+    background: -ms-radial-gradient(center, ellipse cover, #1a2230 0%,#05040a 100%); /* IE10+ */
+    background: radial-gradient(ellipse at center, #1a2230 0%,#05040a 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1a2230', endColorstr='#05040a',GradientType=1 ); /* IE6-8 fallback on horizontal gradient */
+
+    .stripes {
+        @include opacity(0.1);
+        background:url('../images/subtle-stripes.png');
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+
+    .hero {
+        position: absolute;
+        bottom: 1rem;
+        left: 0;
+        width: 100%;
+        text-align: center;
+        font-family: Verdana, sans-serif;
+
+        @include respond-to(tiniest-height) {
+            position: relative;
+            top: auto;
+            bottom: auto;
+            padding: 2rem 0 2rem 0;
+        }
+
+        h3, figcaption {
+            color: white;
+            font-style: italic;
+        }
+
+        h3 {
+            @include single-text-shadow(0, 0, 1px, false, white);
+        }
+
+        p {
+            color: #ffed00;
+            margin: 0;
+        }
+
+        figure {
+            @include inline-block;
+            position: relative;
+
+            img {
+                @include respond-to(small-height) {
+                    display: none;
+                }
+            }
+
+            figcaption {
+                @include opacity(0.2);
+                @include single-transition(all, 0.5s, ease, 0);
+                -moz-transition: all 0.5s;
+                position: absolute;
+                bottom: 2%;
+                left: 70%;
+                white-space: nowrap;
+                text-transform: lowercase;
+
+                @include respond-to(small-height) {
+                    @include opacity(1);
+                    position: relative;
+                    bottom: auto;
+                    left: auto;
+                    margin-top: 2rem;
+                    margin-bottom: 2rem;
+                    text-transform: none;
+
+                    &:after {
+                        content: '.';
+                    }
+                }
+            }
+
+            &:hover figcaption {
+                @include opacity(1);
+            }        
+        }
+
+    }
 
     .starfield {
         @include no-bullets;
         position: relative;
         width: 100%;
+        max-width: 1600px;
+        margin: 0 auto;
         height: 100%;
         overflow: hidden;
+        display: none;
 
-        li {
-            @include transition(-webkit-transform 0.1s ease-out 0,
-                                -moz-transform 0.1s ease-out 0,
-                                transform 0.1s ease-out 0);
+        li.layer {
+            @include single-transition(all, 0.1s, ease, 0);
+            margin-top: 50px;
         }
+
+        @include respond-to(tiniest-height) {
+            display: none !important;
+        }
+
+        @include respond-to(small-width) {
+            top: -10%;
+        }
+
     }
+
+    $left-offset: 12%;
 
     .spaceship {
         @include pendulum("spaceship", 2.79s);
         position: absolute;
         top: 200px;
-        left: 10%;
+        left: $left-offset;
         z-index: 11;
 
         img {
@@ -62,7 +156,7 @@ section.welcome {
         @include pendulum("moon", 3.1s);
         position: absolute;
         top: 16px;
-        left: 50%;
+        left: ($left-offset + 40%);
         z-index: 10;
 
         img {
@@ -76,16 +170,22 @@ section.welcome {
         z-index: 5;
     }
 
-    .small-star img {
-        position: relative;
-        z-index: 2;
+    .small.star {
+        @include respond-to(small-width) {
+            display: none;
+        }
+
+        img {
+                position: relative;
+                z-index: 2;
+        }
     }
 
     .star-1 {
         @include pendulum("star-1", 2.99s);
         position: absolute;
         top: 100px;
-        left: 10%;
+        left: $left-offset;
         height: 35px;
     }
 
@@ -93,7 +193,7 @@ section.welcome {
         @include pendulum("star-2", 3.79s);
         position: absolute;
         top: 39px;
-        left: 25%;
+        left: ($left-offset + 15%);
         height: 50px;
     }
 
@@ -101,21 +201,21 @@ section.welcome {
         @include pendulum("star-3", 3.19s);
         position: absolute;
         top: 23px;
-        left: 30%;
+        left: ($left-offset + 20%);
         height: 25px;
     }
     .star-4 {
         @include pendulum("star-4", 3.1s);
         position: absolute;
         top: 230px;
-        left: 35%;
+        left: ($left-offset + 25%);
     }
 
     .star-5 {
         @include pendulum("star-5", 2.8s);
         position: absolute;
         top: 170px;
-        left: 42%;
+        left: ($left-offset + 32%);
         height:35px;
     }
 
@@ -123,7 +223,7 @@ section.welcome {
         @include pendulum("star-6", 3.6s);
         position: absolute;
         top: 90px;
-        left: 65%;
+        left: ($left-offset + 55%);
         height:50px;
     }
 
@@ -131,7 +231,7 @@ section.welcome {
         @include pendulum("star-7", 3.2s);
         position: absolute;
         top: 60px;
-        left: 70%;
+        left: ($left-offset + 60%);
         height:25px;
     }
 
@@ -139,14 +239,14 @@ section.welcome {
         @include pendulum("star-8", 2.7s);
         position: absolute;
         top: 250px;
-        left: 75%;
+        left: ($left-offset + 65%);
     }
 
     .star-9 {
         @include pendulum("star-9", 2.9s);
         position: absolute;
         top: 180px;
-        left: 80%;
+        left: ($left-offset + 70%);
         height: 55px;
     }
 

@@ -5,6 +5,7 @@
 @import "compass/css3/transition";
 @import "compass/typography/lists/bullets";
 @import "compass/css3/opacity";
+@import "compass/css3/text-shadow";
 
 /* Global styles */
 body, html {
@@ -34,6 +35,24 @@ $sprites2x: sprite-map("sprites2x/*.png");
     }   
 
     @include background-size(image-width(sprite-path($sprites2x)) auto);
+}
+
+$small-width: 840px;
+$small-height: 700px;
+$tiniest-height: 320px;
+
+@mixin respond-to($media) {
+    @each $rule in $media {
+        @if $rule == small-width {
+            @media only screen and (max-width: $small-width) { @content; }
+        }
+        @else if $rule == small-height {
+            @media only screen and (max-height: $small-height) { @content; }
+        }
+        @else if $rule == tiniest-height {
+            @media only screen and (max-height: $tiniest-height) { @content; }
+        }
+    }
 }
 
 @import "vendor";
