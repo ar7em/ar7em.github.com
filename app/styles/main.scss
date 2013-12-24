@@ -6,6 +6,8 @@
 @import "compass/typography/lists/bullets";
 @import "compass/css3/opacity";
 @import "compass/css3/text-shadow";
+@import "compass/css3/transform";
+@import "compass/css3/images";
 
 /* Global styles */
 body, html {
@@ -39,20 +41,25 @@ $sprites2x: sprite-map("sprites2x/*.png");
 
 $small-width: 840px;
 $small-height: 700px;
-$tiniest-height: 320px;
 
 @mixin respond-to($media) {
     @each $rule in $media {
         @if $rule == small-width {
-            @media only screen and (max-width: $small-width) { @content; }
+            @media only screen and (max-width: $small-width), print { @content; }
         }
         @else if $rule == small-height {
-            @media only screen and (max-height: $small-height) { @content; }
-        }
-        @else if $rule == tiniest-height {
-            @media only screen and (max-height: $tiniest-height) { @content; }
+            @media only screen and (max-height: $small-height), print { @content; }
         }
     }
+}
+
+@mixin disable-selection {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 }
 
 @import "vendor";
