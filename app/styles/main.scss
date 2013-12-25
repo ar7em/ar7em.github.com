@@ -8,25 +8,26 @@
 @import "compass/css3/text-shadow";
 @import "compass/css3/transform";
 @import "compass/css3/images";
-
-/* Global styles */
-body, html {
-    height: 100%;
-}
+@import "compass/css3/box-shadow";
 
 /* Global mixins */
 $sprites: sprite-map("sprites/*.png");
 $sprites2x: sprite-map("sprites2x/*.png");
 
 @mixin sprite-background($name) {
-  background-repeat: no-repeat;
-  display: block;
-  background-image: sprite-url($sprites);
-  background-position: sprite-position($sprites, $name);
-  height: image-height(sprite-file($sprites, $name));
-  width: image-width(sprite-file($sprites, $name));
+    background-repeat: no-repeat;
+    display: block;
+    background-image: sprite-url($sprites);
+    background-position: sprite-position($sprites, $name);
+    height: image-height(sprite-file($sprites, $name));
+    width: image-width(sprite-file($sprites, $name));
 
-    @media (-webkit-min-device-pixel-ratio: 1.5), (-o-min-device-pixel-ratio: 3/2), (min-device-pixel-ratio: 1.5) {
+    @media only screen and (-webkit-min-device-pixel-ratio: 2),
+           only screen and (   min--moz-device-pixel-ratio: 2),
+           only screen and (     -o-min-device-pixel-ratio: 2/1),
+           only screen and (        min-device-pixel-ratio: 2),
+           only screen and (                min-resolution: 192dpi),
+           only screen and (                min-resolution: 2dppx) {
         background-image: sprite-url($sprites2x);
         background-position: 0 round(nth(sprite-position($sprites2x, $name), 2) / 2);
         height: round(image-height(sprite-file($sprites2x, $name)) / 2);
@@ -36,11 +37,11 @@ $sprites2x: sprite-map("sprites2x/*.png");
         @include background-size(ceil(image-width(sprite-path($sprites2x)) / 2) auto);
     }   
 
-    @include background-size(image-width(sprite-path($sprites2x)) auto);
+    @include background-size(image-width(sprite-path($sprites)) auto);
 }
 
 $small-width: 840px;
-$small-height: 700px;
+$small-height: 500px;
 
 @mixin respond-to($media) {
     @each $rule in $media {
@@ -49,6 +50,14 @@ $small-height: 700px;
         }
         @else if $rule == small-height {
             @media only screen and (max-height: $small-height), print { @content; }
+        }
+        @else if $rule == retina {
+            @media only screen and (-webkit-min-device-pixel-ratio: 2),
+                   only screen and (   min--moz-device-pixel-ratio: 2),
+                   only screen and (     -o-min-device-pixel-ratio: 2/1),
+                   only screen and (        min-device-pixel-ratio: 2),
+                   only screen and (                min-resolution: 192dpi),
+                   only screen and (                min-resolution: 2dppx) { @content; }
         }
     }
 }
@@ -62,5 +71,43 @@ $small-height: 700px;
     user-select: none;
 }
 
+@mixin bg-cover($image, $attachment: fixed) {
+    background: url($image) no-repeat center top $attachment; 
+    background-size: 100% auto;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+%webfont {
+    font-family: "Open Sans Condensed", Verdana, sans-serif;
+}
+
+/* Global styles */
+body, html {
+    height: 100%;
+}
+
+body {
+    background-color: #05040a;
+    background-image: url('../images/bg.png');
+    background-position: top left;
+    background-repeat: repeat;
+
+    @include respond-to(retina) {
+        background-image: url('../images/bg@2x.png');
+    }
+}
+
+body > section {
+    @include single-box-shadow(rgba(0,0,0,0.8), 0, 6px, 8px, 0, false);
+    position: relative;
+    z-index: 1;
+    margin-top: 2em;
+}
+
 @import "vendor";
 @import "welcome";
+@import "contacts";
+@import "footer";
