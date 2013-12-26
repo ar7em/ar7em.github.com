@@ -335,7 +335,7 @@ module.exports = function (grunt) {
                     dest: '.tmp/styles/',
                     src: '{,*/}*.css'
                 },
-                /* Copy spreites too */
+                /* Copy sprites too */
                 {
                     expand: true,
                     dot: true,

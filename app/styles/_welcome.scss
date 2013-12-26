@@ -1,21 +1,50 @@
 section.welcome {
-	width: 100%;
-	height: 400px;
-	background: white;
-	padding-top: 3em;
 
-	.portrait {
-		@include sprite-background(portrait);
-		width: 181px;
-		margin: 0 auto;
-	}
+    .portrait {
+        @include sprite-background(portrait);
+        width: 181px;
+        margin: 0 auto;
+    }
 
-	p {
-		@extend %webfont;
-		font-size: 2em;
-		color: #393939;
-		max-width: 30em;
-		margin: 0 auto;
-		padding: 1em;
-	}
+    p {
+        font-size: 1.5em;
+        max-width: $content-width;
+        margin: 1em auto 0 auto;
+    }
+
+    .contacts {
+        @include border-radius(9px);
+        background: url("../images/envelope-bg.png");
+        background-position: 1% 0%;
+        max-width: $content-width;
+        margin: 3em auto 2em auto;
+        padding: 1em;
+
+        address {
+            @include border-radius(6px);
+            font-size: 1.8em;
+            background: #fff;
+            padding: 1em;
+            margin: 0;
+
+            @include respond-to(small-width) {
+                font-size: 1em;
+            }
+
+            i {
+                min-width: 1.5em;
+            }
+
+            p {
+                margin: 0;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+            }
+        }
+
+        @include respond-to(retina) {
+            background-image: url('../images/envelope-bg@2x.png');
+        }
+    }
 }

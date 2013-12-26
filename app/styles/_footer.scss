@@ -1,15 +1,15 @@
-$infinite-point-distance: 10000px;
+$infinite-point-distance: 200px;
 
 @mixin pendulum($type, $time) {
-    -moz-transform-origin: 50% (-$infinite-point-distance/50);
+    -moz-transform-origin: 50% (-$infinite-point-distance);
     -moz-animation-duration: $time;
     -moz-animation-name: pendulum-#{$type};
     -moz-animation-iteration-count: infinite;
-    -webkit-transform-origin: 50% (-$infinite-point-distance/50);
+    -webkit-transform-origin: 50% (-$infinite-point-distance);
     -webkit-animation-duration: $time ;
     -webkit-animation-name: pendulum-#{$type};
     -webkit-animation-iteration-count: infinite;
-    transform-origin: 50% (-$infinite-point-distance/50);
+    transform-origin: 50% (-$infinite-point-distance);
     animation-duration: $time;
     animation-name: pendulum-#{$type};
     animation-iteration-count: infinite;
@@ -30,6 +30,7 @@ footer {
     background: url('../images/bg-transparent.png') repeat, -ms-radial-gradient(center, ellipse cover, #2a364c 0%,#05040a 100%); /* IE10+ */
     background: url('../images/bg-transparent.png') repeat, radial-gradient(ellipse at center, #2a364c 0%,#05040a 100%); /* W3C */
     z-index: 0;
+    overflow: hidden;
 
     @include respond-to(retina) {
         background: url('../images/bg@2x.png'); /* Old browsers */
@@ -224,7 +225,7 @@ footer {
             bottom: 50%;
             left: 50%;
             border-right: 1px dotted #414652;
-            height: $infinite-point-distance;
+            height: $infinite-point-distance * 5;
             width: 1px;
             margin-left: -1px;
             z-index: 1;

@@ -9,6 +9,14 @@
 @import "compass/css3/transform";
 @import "compass/css3/images";
 @import "compass/css3/box-shadow";
+@import "compass/css3/border-radius";
+
+/* Global variables */
+$content-width: 60rem;
+$sky: #428bca;
+$blue: #e8524b;
+$red: #e8524b;
+$font-color: #393939;
 
 /* Global mixins */
 $sprites: sprite-map("sprites/*.png");
@@ -80,34 +88,101 @@ $small-height: 500px;
     background-size: cover;
 }
 
-%webfont {
-    font-family: "Open Sans Condensed", Verdana, sans-serif;
+@mixin webfont ($italic: false) {
+    @if $italic == true {
+        font-family: "gentiumplus-i", Georgia, serif;
+    }
+    @else {
+        font-family: "gentiumplus-r", Georgia, serif;
+    }
+}
+
+%shadowed {
+    @include single-box-shadow(rgba(0,0,0,0.6), 0, 1px, 4px, 0, false);
 }
 
 /* Global styles */
+@font-face {
+    font-family: 'gentiumplus-i';
+    src: url('fonts/gentiumplus-i.eot');
+    src: url('fonts/gentiumplus-i.eot?#iefix') format('embedded-opentype'),
+         url('fonts/gentiumplus-i.woff') format('woff'),
+         url('fonts/gentiumplus-i.ttf') format('truetype');
+    font-weight: normal;
+}
+
+
+@font-face {
+    font-family: 'gentiumplus-r';
+    src: url('fonts/gentiumplus-r.eot');
+    src: url('fonts/gentiumplus-r.eot?#iefix') format('embedded-opentype'),
+         url('fonts/gentiumplus-r.woff') format('woff'),
+         url('fonts/gentiumplus-r.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
 body, html {
     height: 100%;
 }
 
 body {
-    background-color: #05040a;
-    background-image: url('../images/bg.png');
-    background-position: top left;
-    background-repeat: repeat;
-
-    @include respond-to(retina) {
-        background-image: url('../images/bg@2x.png');
-    }
+    @include webfont;
+    background: #fafafa;
+    color: $font-color;
 }
 
 body > section {
-    @include single-box-shadow(rgba(0,0,0,0.8), 0, 6px, 8px, 0, false);
     position: relative;
     z-index: 1;
-    margin-top: 2em;
+    background: #fafafa;
+    padding: 3em 1em;
+
+    & + section {
+        margin-top: 2em;
+    }
+
+    &:last-child {
+        @include single-box-shadow(rgba(0,0,0,0.8), 0, 6px, 8px, 0, false);
+    }
 }
 
-@import "vendor";
+a {
+    @include single-transition(color, 0.2s, ease-out, 0s);
+    position: relative;
+    color: $sky;
+
+    &:before {
+        content: "";
+        @include single-transition(border-color, 0.2s, ease-out, 0s);
+        @include opacity(0.3);
+        position: absolute;
+        bottom: 0.2em;
+        left: 0;
+        width: 100%;
+        height: 0px;
+        border-bottom: 1px solid $sky;
+    }
+
+    &:hover {
+        text-decoration: none;
+        color: $red;
+
+        &:before {
+            border-bottom: 1px solid $red;
+        }
+    }
+
+    &:active, &:visited {
+        text-decoration: none;
+        color: $blue;
+
+        &:before {
+            border-bottom: 1px solid $blue;
+        }
+    }
+}
+
 @import "welcome";
-@import "contacts";
+@import "experience";
 @import "footer";

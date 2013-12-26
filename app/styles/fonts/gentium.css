@@ -1,0 +1,20 @@
+
+@font-face {
+    font-family: 'gentiumplus-i';
+    src: url('gentiumplus-i.eot');
+    src: url('gentiumplus-i.eot?#iefix') format('embedded-opentype'),
+         url('gentiumplus-i.woff') format('woff'),
+         url('gentiumplus-i.ttf') format('truetype');
+    font-weight: normal;
+}
+
+
+@font-face {
+    font-family: 'gentiumplus-r';
+    src: url('gentiumplus-r.eot');
+    src: url('gentiumplus-r.eot?#iefix') format('embedded-opentype'),
+         url('gentiumplus-r.woff') format('woff'),
+         url('gentiumplus-r.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
