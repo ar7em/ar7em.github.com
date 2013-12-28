@@ -17,6 +17,7 @@ $sky: #428bca;
 $blue: #e8524b;
 $red: #e8524b;
 $font-color: #393939;
+$additional-font-color: lighten($font-color, 30%);
 
 /* Global mixins */
 $sprites: sprite-map("sprites/*.png");
@@ -128,23 +129,45 @@ body, html {
 
 body {
     @include webfont;
-    background: #fafafa;
     color: $font-color;
+
+    @include respond-to(small-width) {
+        font-size: 12px;
+    }
 }
 
 body > section {
     position: relative;
     z-index: 1;
-    background: #fafafa;
-    padding: 3em 1em;
+    background: #fff;
+    padding: 0 2em;
+    margin-top: 2em;
+    text-align: center;
 
     & + section {
-        margin-top: 2em;
+
+        &:before {
+            content: "";
+            @include inline-block;
+            @include sprite-background(vignette);
+            position: relative;
+            width: 96px;
+            height: 47px;
+            margin: 4em auto 3em auto;
+
+            @include respond-to(small-width) {
+                margin-bottom: 3.5em;
+            }
+        }
     }
 
     &:last-child {
         @include single-box-shadow(rgba(0,0,0,0.8), 0, 6px, 8px, 0, false);
     }
+}
+
+p {
+    text-align: left;
 }
 
 a {
@@ -181,6 +204,12 @@ a {
             border-bottom: 1px solid $blue;
         }
     }
+}
+
+h2 {
+    @include webfont;
+    font-size: 4em;
+    font-family: Georgia, serif;
 }
 
 @import "welcome";

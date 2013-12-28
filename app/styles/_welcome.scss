@@ -15,27 +15,39 @@ section.welcome {
     .contacts {
         @include border-radius(9px);
         background: url("../images/envelope-bg.png");
-        background-position: 1% 0%;
+        background-position: 8% 0%;
         max-width: $content-width;
-        margin: 3em auto 2em auto;
+        margin: 2em auto;
         padding: 1em;
+
+        @include respond-to(small-width) {
+        	@include inline-block;
+        	max-width: 100%;
+        }
 
         address {
             @include border-radius(6px);
-            font-size: 1.8em;
             background: #fff;
             padding: 1em;
             margin: 0;
-
-            @include respond-to(small-width) {
-                font-size: 1em;
-            }
+            text-align: left;
 
             i {
                 min-width: 1.5em;
             }
 
-            p {
+            ul {
+            	@include no-bullets;
+            	margin: 0;
+            	padding: 0 0 0 0.2em;
+            	font-size: 2.5em;
+
+            	@include respond-to(small-width) {
+                	font-size: 1.8em;
+            	}
+            }
+
+            li {
                 margin: 0;
                 overflow: hidden;
                 text-overflow: ellipsis;

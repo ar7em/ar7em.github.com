@@ -19,8 +19,9 @@ html.no-js
     // Place favicon.ico and apple-touch-icon.png in the root directory
     // build:css styles/vendor.css
     link(rel='stylesheet', href='styles/vendor.css')    
-    // bower:css
-    // endbower
+    // endbuild
+    // build:css styles/plugins.css
+    link(rel='stylesheet', href='bower_components/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.css')    
     // endbuild
     // build:css(.tmp) styles/main.css
     link(rel='stylesheet', href='styles/main.css')
@@ -31,15 +32,14 @@ html.no-js
     include partials/experience
     include partials/footer
     // build:js scripts/vendor.js
-    // bower:js
     script(src='bower_components/jquery/jquery.js')
-    // endbower
     // endbuild
     // build:js scripts/main.js
     script(src='scripts/smoothscroll.js')
     script(src='scripts/main.js')
     // endbuild
     // build:js scripts/plugins.js
+    script(src='bower_components/malihu-custom-scrollbar-plugin/js/minified/jquery.mCustomScrollbar.min.js')
     script(src='bower_components/sass-bootstrap/js/affix.js')
     script(src='bower_components/sass-bootstrap/js/alert.js')
     script(src='bower_components/sass-bootstrap/js/dropdown.js')
