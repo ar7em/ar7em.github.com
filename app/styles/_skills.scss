@@ -2,9 +2,11 @@ $skills-icons-color: #333333;
 
 .tree {
 	@include inline-block;
-	
+	max-width: 100%;
+
 	li {
 		a {
+			@include single-transition(opacity, 0s, ease-out, 0s);
 			border-bottom: none;
 
 			i {
@@ -14,12 +16,93 @@ $skills-icons-color: #333333;
 			}
 
 			span {
-				@extend custom-link;
 				display: block;
 				margin-top: 0.3rem;
 			}
 		}
+
+		&::before {
+			@include single-transition(border-color, 0.2s, ease-out, 0s);
+		}
 	}
+
+	// connectors and element opacity
+	ul li a i,
+	ul li::after, 
+	ul li::before, 
+	ul::before, 
+	ul ul::before {
+		@include single-transition(opacity, 0.2s, ease-out, 0s);
+		@include opacity(0.9);
+	}
+}
+
+
+// hover animation property
+.tree li a i {
+	@include single-transition(opacity, 0s, ease-out, 0s);
+}
+
+ul li a:hover i,
+.tree li a:hover+ul li a i, 
+.tree li a:hover+ul li::after, 
+.tree li a:hover+ul li::before, 
+.tree li a:hover+ul::before, 
+.tree li a:hover+ul ul::before {
+	@include single-transition(opacity, 0s, ease-out, 0s);
+	@include opacity(1);
+}
+
+
+// popups styling
+.popover {
+	-webkit-box-shadow: none;
+	box-shadow: none;
+	// tint is requiredbecause of arrows antialiasing
+	border-color: tint($red, 20%);
+	color: $red;
+
+	// fix firefox bug with dark arrow
+	.arrow:after {
+		border-color: rgba(255, 255, 255, 0);
+	}
+
+	&.right .arrow {
+		border-right-color: $red;
+	}
+
+	&.right .arrow:after {
+		border-right-color: white;
+	}
+
+	&.top .arrow {
+		border-top-color: $red;
+	}
+
+	&.top .arrow:after {
+		border-top-color: white;
+	}
+
+	&.bottom .arrow {
+		border-bottom-color: $red;
+	}
+
+	&.bottom .arrow:after {
+		border-bottom-color: white;
+	}
+
+	&.left .arrow {
+		border-left-color: $red;
+	}
+
+	&.left .arrow:after {
+		border-left-color: white;
+	}
+}
+
+// icons styling
+.fa.fa-puzzle-piece {
+	margin-left: 0.8rem;
 }
 
 .python-icon {
@@ -32,4 +115,8 @@ $skills-icons-color: #333333;
 
 .js-icon {
 	@include sprite-background("js");
+}
+
+.html-icon {
+	@include sprite-background("html");
 }
