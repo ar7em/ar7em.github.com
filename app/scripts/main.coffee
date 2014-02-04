@@ -18,3 +18,13 @@ $(document).ready ->
 		animation: 0
 		trigger: 'click hover'
 		container: "body"
+
+	# Initialize lightbox for showcase
+	$(".showcase .carousel").each ->
+		$(this).find('.item .fullsize').colorbox 
+			rel:this.id
+			fixed: true
+			maxWidth: "100%"
+			close: ""
+			next: ""
+			previous: ""

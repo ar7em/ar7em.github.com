@@ -1,0 +1,41 @@
+mixin carousel(name, images)
+	div.carousel.slide(id="carousel" + name, data-interval="false")
+		//- Slides
+		div.carousel-inner
+			-var additionalClass = " active"
+			-each image, i in images
+				div(class="item" + additionalClass)
+					if images[i].image
+						a.fullsize(href=images[i].image)
+							img(src=images[i].thumbnail, alt=name + " " + (i+1) )
+					else
+						a(href="#carousel" + name, data-slide="next")
+							img(src=images[i].thumbnail, alt=name + " " + (i+1) )
+				-additionalClass = ""
+
+		//- Controls
+		a.left.carousel-control(href="#carousel" + name, data-slide="prev")
+			span.fa.fa-angle-left
+		a.right.carousel-control(href="#carousel" + name, data-slide="next")
+			span.fa.fa-angle-right
+
+		//- Indicators
+		ol.carousel-indicators
+			-var additionalClass = " active"
+			-each image, i in images
+				li(class=additionalClass, data-target="#carousel" + name, data-slide-to=i)
+				-additionalClass = ""
+
+
+section.showcase
+	h1#showcase Портфолио
+	
+	article
+		h2 
+			a(href="http://clickmosaic.ru/") Clickmosaic
+
+		mixin carousel("Clickmosaic", [{thumbnail: "images/showcases/clickmosaic/logo.png"},{thumbnail:"images/showcases/clickmosaic/bg-thumb.jpg", image: "images/showcases/clickmosaic/bg.png"},{thumbnail:"images/showcases/clickmosaic/gallery-thumb.jpg", image: "images/showcases/clickmosaic/gallery.png"}])
+
+		p Сайт изготовителя и продавца мозаики ручной работы, разработанный в паре с дизайнером и предназначенный для передачи заказчику «под ключ».
+		p В качестве CMS используется Mezzanine&nbsp;—&nbsp;мощная и надежная платформа на базе Django, предоставляющая удобный пользовательский интерфейс администраторам и контент&#8209;менеджерам по управлению публикациями и формами обратной связи.
+		p Сервер находится под управлением Gunicorn и nginx.
