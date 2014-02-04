@@ -1,3 +1,9 @@
+section.showcase {
+	article + article {
+		margin-top: 4rem;
+	}
+}
+
 .carousel {
 	$carousel-height: 16.6rem;
 

@@ -23,7 +23,6 @@ $(document).ready ->
 	$(".showcase .carousel").each ->
 		$(this).find('.item .fullsize').colorbox 
 			rel:this.id
-			fixed: true
 			maxWidth: "100%"
 			close: ""
 			next: ""
