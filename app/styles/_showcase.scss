@@ -1,17 +1,40 @@
 section.showcase {
 	article + article {
-		margin-top: 4rem;
+		margin-top: 2rem;
+
+        &:before {
+            content: "";
+            @include inline-block;
+            @include sprite-background(vignette-small);
+            position: relative;
+            width: 95px;
+            height: 6px;
+            margin: 2rem auto;
+        }
+	}
+
+
+	p.additional {
+		position: relative;
+		border-left: 1px dotted $additional-font-color;
+		padding-left: 1rem;
+		color: $additional-font-color;
 	}
 }
 
 .carousel {
-	$carousel-height: 16.6rem;
+	$carousel-height: 16.7rem;
 
 	.item {
 		text-align: center;
 		
 		> a {
 			display: inline-block;
+			border: none;
+
+			&:hover {
+				border: none;
+			}
 		}
 
 		img {

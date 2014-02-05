@@ -1,4 +1,12 @@
 $(document).ready ->
+	# Initiate smooth scrolling for navigation anchors
+	$("nav a").on 'click', (e)->
+		e.preventDefault()
+		$.smoothScroll
+			scrollTarget: $(this).attr "href"
+		return false
+
+	# Initiate custom scrollbar
 	$(".experience .jobs, .skills .tree").mCustomScrollbar
 		mouseWheel: false
 		horizontalScroll: true
@@ -23,7 +31,7 @@ $(document).ready ->
 	$(".showcase .carousel").each ->
 		$(this).find('.item .fullsize').colorbox 
 			rel:this.id
-			maxWidth: "100%"
+			maxWidth: "80%"
 			close: ""
 			next: ""
 			previous: ""

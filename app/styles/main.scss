@@ -10,6 +10,7 @@
 @import "compass/css3/images";
 @import "compass/css3/box-shadow";
 @import "compass/css3/border-radius";
+@import "compass/typography/lists/inline-block-list";
 
 /* Global variables */
 $content-width: 32rem;
@@ -100,6 +101,20 @@ $small-height: 500px;
     }
 }
 
+@mixin prepend-with-dot($marginLeft: 1rem) {
+    &:before {
+        content: "\00B7";
+        display: inline;
+        margin-left: $marginLeft;
+        margin-right: 1rem;
+        font-family: Georgia;
+
+        @include respond-to(small-width) {
+            margin-left: 0rem;
+        }
+    }
+}
+
 %shadowed {
     @include single-box-shadow(rgba(0,0,0,0.6), 0, 1px, 4px, 0, false);
 }
@@ -148,7 +163,6 @@ body > section {
     text-align: center;
 
     & + section {
-
         &:before {
             content: "";
             @include inline-block;
@@ -157,10 +171,6 @@ body > section {
             width: 96px;
             height: 47px;
             margin: 4rem auto;
-
-            @include respond-to(small-width) {
-                margin-bottom: 3.5rem;
-            }
         }
     }
 
@@ -230,3 +240,4 @@ h2 {
 @import "skills";
 @import "showcase";
 @import "colorbox";
+@import "footer";

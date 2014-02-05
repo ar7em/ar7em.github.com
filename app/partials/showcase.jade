@@ -32,9 +32,10 @@ section.showcase
 	
 	article
 		h2 
-			a(href="http://clickmosaic.ru/") Clickmosaic
+			a(href="http://clickmosaic.ru/") Click Mosaic
 
 		mixin carousel("Clickmosaic", [{thumbnail: "images/showcases/clickmosaic/logo.png"},{thumbnail:"images/showcases/clickmosaic/bg-thumb.jpg", image: "images/showcases/clickmosaic/bg.png"},{thumbnail:"images/showcases/clickmosaic/gallery-thumb.jpg", image: "images/showcases/clickmosaic/gallery.png"}])
+		p.additional Роль в проекте: full stack разработчик.
 		p Сайт изготовителя и продавца мозаики ручной работы, разработанный в паре с дизайнером и предназначенный для передачи заказчику «под ключ».
 		p В качестве CMS используется Mezzanine&nbsp;—&nbsp;мощная и надежная платформа на базе Django, предоставляющая удобный пользовательский интерфейс администраторам и контент&#8209;менеджерам по управлению публикациями и формами обратной связи.
 		p Сервер находится под управлением Gunicorn и nginx.
@@ -43,5 +44,33 @@ section.showcase
 		h2
 			a(href="http://eriv.ru/") electric river
 		mixin carousel("Electricriver", [{thumbnail: "images/showcases/electricriver/logo.png"},{thumbnail:"images/showcases/electricriver/desktop-thumb.jpg", image: "images/showcases/electricriver/desktop.png"},{thumbnail:"images/showcases/electricriver/mobile-thumb.jpg", image: "images/showcases/electricriver/mobile.png"}])
-		p Сайт digital агентства на базе статического генератора Wintersmith. Статическая генерация позволяет снизить нагрузку на сервер и проводить демонстрацию и тестирование сайта на любом персональном компьютере. Реализована поддержка как обычных (десктопных) браузеров, так и мобильных устройств. 
+		p.additional Роль в проекте: full stack разработчик.
+		p Сайт digital агентства на базе статического генератора Wintersmith. Статическая генерация позволяет снизить нагрузку на сервер и проводить демонстрацию и тестирование сайта на любом персональном компьютере. Дизайн адаптирован как для обычных (десктопных) браузеров, так и для мобильных устройств. 
 		p Возможность эффективной интернационализации содержимого достигается за счет разделения шаблонов и содержимого страниц.
+
+	article
+		h2
+			a(href="https://www.facebook.com/uralchem/app_293026497509696") «УРАЛХИМ» в Facebook
+		mixin carousel("Uralhim", [{thumbnail: "images/showcases/uralhim/logo.png"},{thumbnail:"images/showcases/uralhim/page-thumb.jpg", image: "images/showcases/uralhim/page.png"}])
+		p.additional Роль в проекте: front-end разработчик, верстальщик.
+		p Информационное приложение в социальной сети Facebook, предоставляющее возможность выбрать на карте одно из четырех предприятий ОАО «ОХК «УРАЛХИМ» и ознакомиться с подробной информацией о нём.
+		p Используемые на этой странице карты Google Maps были стилизованы с целью выделить на рельефе местности булавки предприятий для более комфортного визуального восприятия информации.
+
+	article
+		h2
+			a(href="https://www.facebook.com/alfacapital/app_141160519418633") «Альфа-Капитал» в Facebook
+		mixin carousel("Alfacapital", [{thumbnail: "images/showcases/alfacapital/logo.png"},{thumbnail:"images/showcases/alfacapital/page-thumb.jpg", image: "images/showcases/alfacapital/page.png"}])
+		p.additional Роль в проекте: full stack разработчик.
+		p Новостное приложение в социальной сети Facebook с интересными фактами из мира финансов. В качестве backend используется фреймворк Flask.
+		p Для добавления контента предусмотрена панель администратора, с помощью которой можно создавать и редактировать заметки и разделы.
+
+	article
+		h2
+			a(href="http://sochi2014.ingos.ru/") Эстафета Олимпийского огня от «Ингосстрах»
+		mixin carousel("Ingosstrah", [{thumbnail: "images/showcases/ingosstrah/logo.png"},{thumbnail:"images/showcases/ingosstrah/main-thumb.jpg", image: "images/showcases/ingosstrah/main.png"},{thumbnail:"images/showcases/ingosstrah/map-thumb.jpg", image: "images/showcases/ingosstrah/map.png"},{thumbnail:"images/showcases/ingosstrah/city-thumb.jpg", image: "images/showcases/ingosstrah/city.png"},{thumbnail:"images/showcases/ingosstrah/news-thumb.jpg", image: "images/showcases/ingosstrah/news.png"},{thumbnail:"images/showcases/ingosstrah/mobile-thumb.jpg", image: "images/showcases/ingosstrah/mobile.png"}])
+		p.additional Роль в проекте: front-end разработчик, верстальщик.
+		p Масштабный проект, развившийся из нескольких статических страниц до объемного портала по Эстафете Олимпийского огня, которая предворяла Зимние Олимпийские игры в Сочи.
+		p Центральным элементом сайта является интерактивная карта маршрута Эстафеты, использующая Javascript и Canvas для подсветки городов-участников и оставшегося факелоносцам пути до Сочи.
+		p Каждый город-участник имеет персонально оформленную страницу, содержащую интересные факты и отчеты о прошедших предолимпийских мероприятиях. Переход между городами осуществляется без перезагрузки страницы на основе AJAX вызовов.
+		p В качестве backend был выбран Django, используемый в качестве REST-сервиса и предоставляющий удобный административный интерфейс менеджерам сайта.
+		p Сайт адаптирован для отображения как на экранах с большим разрешением, так и для мобильных устройств.

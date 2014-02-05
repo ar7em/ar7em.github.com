@@ -47,3 +47,40 @@ section.welcome {
         }
     }
 }
+
+nav {
+    font-size: $base-font-size;
+    margin-bottom: 1rem;
+    background: white;
+
+    ul {
+        @include no-bullets;
+        @include inline-block-list;
+
+        li {
+            @include prepend-with-dot;
+        }
+
+        li:first-child {
+            &:before {
+                display: none;
+            }
+        }
+    }
+
+    @include respond-to(small-width) {
+        text-align: left;
+
+        ul {
+            li {
+                display: block;
+            }
+
+            li:first-child {
+                &:before {
+                    display: inline;
+                }
+            }
+        }
+    }
+}
