@@ -33,7 +33,7 @@ footer {
 	}
 
 	a, a span {
-		$lighterK: 20%;
+		$lighterK: 15%;
 	    color: lighten($sky, $lighterK);
 	    border-bottom: 1px solid rgba(lighten($sky, $lighterK), 0.3);
 

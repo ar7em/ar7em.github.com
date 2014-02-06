@@ -1,6 +1,12 @@
-section.welcome#welcome
-	figure.portrait
-	p Привет! Меня зовут Артем, я&nbsp;—&nbsp;веб&#8209;разработчик из Москвы. Обожаю космос и Всемирную паутину. Узнайте обо мне немного больше на этой страничке:
+section.welcome.vcard#welcome
+	figure.portrait.photo
+	p 
+		|Привет! Меня зовут 
+		span.fn Артем
+			span.hidden Молоков
+		|, я&nbsp;—&nbsp;
+		span.title веб&#8209;разработчик 
+		|из Москвы. Обожаю космос и Всемирную паутину. Узнайте обо мне немного больше на этой страничке:
 	nav
 		ul
 			li 
@@ -15,5 +21,12 @@ section.welcome#welcome
 	div.contacts#contacts
 		address
 			ul
-				li <i class="fa fa-envelope-o"></i><a href="mailto: molokov.artem@gmail.com" title="molokov.artem@gmail.com">molokov.artem@gmail.com</a>
-				li <i class="fa fa-skype"></i><a href="callto:veresk.msk">veresk.msk</a>
+				li 
+					i.fa.fa-envelope-o
+					a.email(href="mailto: molokov.artem@gmail.com", title="molokov.artem@gmail.com") molokov.artem@gmail.com
+				li
+					i.fa.fa-skype
+					a.tel(href="callto:veresk.msk") veresk.msk
+				li
+					i.fa.fa-user
+					a(href="/vcard.vcf") vCard

@@ -15,7 +15,7 @@
 /* Global variables */
 $content-width: 32rem;
 $sky: #428bca;
-$blue: desaturate( $sky, 20% );
+$blue: lighten( $sky, 10% );
 $red: #e8524b;
 $font-color: #393939;
 $additional-font-color: lighten($font-color, 30%);

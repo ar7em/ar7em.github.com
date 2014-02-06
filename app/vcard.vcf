@@ -1,0 +1,11 @@
+BEGIN:VCARD
+VERSION:2.1
+N:Молоков;Артем
+FN:Артем Молоков
+BDAY:1989-06-25
+TITLE:Веб-разработчик
+TEL;CELL;VOICE:+7-(916)-332-27-84
+ADR;HOME:;;;Москва;;;Россия
+URL;HOME:ar7em.github.com
+EMAIL;INTERNET:molokov.artem@gmail.com
+END:VCARD
