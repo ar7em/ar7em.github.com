@@ -22,7 +22,7 @@ module.exports = function (grunt) {
         yeoman: {
             // Configurable paths
             app: 'app',
-            dist: 'dist'
+            dist: '../'
         },
 
         // Watches files for changes and runs tasks based on the changed files
@@ -108,13 +108,15 @@ module.exports = function (grunt) {
 
         // Empties folders to start fresh
         clean: {
+            options: { force: true },
             dist: {
                 files: [{
                     dot: true,
                     src: [
                         '.tmp',
                         '<%= yeoman.dist %>/*',
-                        '!<%= yeoman.dist %>/.git*'
+                        '!<%= yeoman.dist %>/.git*',
+                        '!<%= yeoman.dist %>/source'
                     ]
                 }]
             },
