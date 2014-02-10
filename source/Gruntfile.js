@@ -221,15 +221,17 @@ module.exports = function (grunt) {
         // additional tasks can operate on them
         useminPrepare: {
             options: {
-                root: '<%= yeoman.app %>',
                 dest: '<%= yeoman.dist %>'
             },
-            html: '<%= yeoman.dist %>/index.html'
+            html: '.tmp/index.html'
         },
 
         // Performs rewrites based on rev and the useminPrepare configuration
         usemin: {
-            html: ['<%= yeoman.dist %>/{,*/}*.html']
+            options: {
+                assetsDirs: ['<%= yeoman.dist %>']
+            },
+            html: ['.tmp/{,*/}*.html'],
         },
 
         // The following *-min tasks produce minified files in the dist folder
@@ -279,28 +281,56 @@ module.exports = function (grunt) {
         // By default, your `index.html`'s <!-- Usemin block --> will take care of
         // minification. These next options are pre-configured if you do not wish
         // to use the Usemin blocks.
-        // cssmin: {
-        //     dist: {
-        //         files: {
-        //             '<%= yeoman.dist %>/styles/main.css': [
-        //                 '.tmp/styles/{,*/}*.css',
-        //                 '<%= yeoman.app %>/styles/{,*/}*.css'
-        //             ]
-        //         }
-        //     }
-        // },
-        // uglify: {
-        //     dist: {
-        //         files: {
-        //             '<%= yeoman.dist %>/scripts/scripts.js': [
-        //                 '<%= yeoman.dist %>/scripts/scripts.js'
-        //             ]
-        //         }
-        //     }
-        // },
-        // concat: {
-        //     dist: {}
-        // },
+        cssmin: {
+            dist: {
+                files: {
+                    '<%= yeoman.dist %>/styles/vendors.css': [
+                        '<%= yeoman.dist %>/styles/vendor.css'
+                    ],
+                    '<%= yeoman.dist %>/styles/plugins.css': [
+                        '<%= yeoman.dist %>/bower_components/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.css'
+                    ],
+                    '<%= yeoman.dist %>/styles/main.css': [
+                        '<%= yeoman.dist %>/styles/main.css'
+                    ]
+                }
+            }
+        },
+        uglify: {
+            dist: {
+                files: {
+                    '<%= yeoman.dist %>/scripts/plugins.js': [
+                        '<%= yeoman.dist %>/bower_components/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.concat.min.js',
+                        '<%= yeoman.dist %>/bower_components/jquery-colorbox/jquery.colorbox-min.js',
+                        '<%= yeoman.dist %>/bower_components/jquery.smooth-scroll/jquery.smooth-scroll.min.js',
+                        '<%= yeoman.dist %>/bower_components/retinajs/src/retina.js',
+                        '<%= yeoman.dist %>/bower_components/sass-bootstrap/js/affix.js',
+                        '<%= yeoman.dist %>/bower_components/sass-bootstrap/js/alert.js',
+                        '<%= yeoman.dist %>/bower_components/sass-bootstrap/js/dropdown.js',
+                        '<%= yeoman.dist %>/bower_components/sass-bootstrap/js/tooltip.js',
+                        '<%= yeoman.dist %>/bower_components/sass-bootstrap/js/modal.js',
+                        '<%= yeoman.dist %>/bower_components/sass-bootstrap/js/transition.js',
+                        '<%= yeoman.dist %>/bower_components/sass-bootstrap/js/button.js',
+                        '<%= yeoman.dist %>/bower_components/sass-bootstrap/js/popover.js',
+                        '<%= yeoman.dist %>/bower_components/sass-bootstrap/js/carousel.js',
+                        '<%= yeoman.dist %>/bower_components/sass-bootstrap/js/scrollspy.js',
+                        '<%= yeoman.dist %>/bower_components/sass-bootstrap/js/collapse.js',
+                        '<%= yeoman.dist %>/bower_components/sass-bootstrap/js/tab.js'
+                    ],
+                    '<%= yeoman.dist %>/scripts/main.js': [
+                        '<%= yeoman.dist %>/scripts/smoothscroll.js',
+                        '<%= yeoman.dist %>/scripts/main.js'
+                    ],
+                    '<%= yeoman.dist %>/scripts/vendor.js': [
+                        '<%= yeoman.dist %>/bower_components/jquery/jquery.js'
+                    ]
+                }
+            }
+        },
+        concat: {
+            dist: {}
+        },
+
 
         // Copies remaining files to places other tasks can use
         copy: {
@@ -333,7 +363,7 @@ module.exports = function (grunt) {
                     dot: true,
                     cwd: '.tmp/styles/',
                     dest: '<%= yeoman.dist %>/styles',
-                    src: '{,*/}*.css'
+                    src: '{,*/}*.{css,png}'
                 }, {
                     expand: true,
                     dot: true,
@@ -354,7 +384,7 @@ module.exports = function (grunt) {
                     dot: true,
                     cwd: '<%= yeoman.app %>/styles',
                     dest: '.tmp/styles/',
-                    src: '{,*/}*.css'
+                    src: '{,*/}*.{css,png}'
                 },
                 /* Copy sprites too */
                 {
@@ -421,7 +451,7 @@ module.exports = function (grunt) {
         coffee: {
             dist: {
                 options: {
-                    sourceMap: false
+                    sourceMap: true
                 },
                 files: [{
                     expand: true,
@@ -479,13 +509,13 @@ module.exports = function (grunt) {
         'svgmin:dist',
         'jade',
         'autoprefixer',
-        //'concat',
-        //'cssmin',
-        //'uglify',
         'copy:dist',
         'modernizr',
         //'rev',
         'usemin',
+        'concat',
+        'cssmin',
+        'uglify',
         'htmlmin',
         'clean:partials'
     ]);
