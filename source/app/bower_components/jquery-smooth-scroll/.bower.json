@@ -1,0 +1,14 @@
+{
+  "name": "jquery-smooth-scroll",
+  "_cacheHeaders": {
+    "ETag": "\"1bc8982724b0786e2aa3cfa5caed4f0a\"",
+    "Content-Length": "57617",
+    "Content-Type": "text/html; charset=utf-8"
+  },
+  "_release": "e-tag:1bc898272",
+  "main": "index",
+  "_source": "https://github.com/kswedberg/jquery-smooth-scroll",
+  "_target": "*",
+  "_originalSource": "https://github.com/kswedberg/jquery-smooth-scroll",
+  "_direct": true
+}

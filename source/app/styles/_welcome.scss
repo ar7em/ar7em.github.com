@@ -1,0 +1,86 @@
+section.welcome {
+
+    .portrait {
+        @include sprite-background(portrait);
+        width: 181px;
+        margin: 0 auto;
+    }
+
+    .contacts {
+        @include border-radius(9px);
+        @include inline-block;
+        background: url("../images/envelope-bg.png");
+        background-position: 11.5% 0%;
+        max-width: 100%;
+        margin: 1rem auto;
+        padding: 1rem;
+
+        address {
+            @include border-radius(6px);
+            background: #fff;
+            padding: 1rem;
+            margin: 0;
+            text-align: left;
+
+            i {
+                min-width: 1.5rem;
+                margin-right: 0.5rem;
+            }
+
+            ul {
+            	@include no-bullets;
+            	margin: 0;
+            	padding: 0 0 0 0.2rem;
+            	font-size: 1.5rem;
+            }
+
+            li {
+                margin: 0;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+            }
+        }
+
+        @include respond-to(retina) {
+            background-image: url('../images/envelope-bg@2x.png');
+        }
+    }
+}
+
+nav {
+    font-size: $base-font-size;
+    margin-bottom: 1rem;
+    background: white;
+
+    ul {
+        @include no-bullets;
+        @include inline-block-list;
+
+        li {
+            @include prepend-with-dot;
+        }
+
+        li:first-child {
+            &:before {
+                display: none;
+            }
+        }
+    }
+
+    @include respond-to(small-width) {
+        text-align: left;
+
+        ul {
+            li {
+                display: block;
+            }
+
+            li:first-child {
+                &:before {
+                    display: inline;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,14 @@
+{
+  "name": "src",
+  "_cacheHeaders": {
+    "ETag": "\"b7167d1012a8c715eb1c5e50023c1514\"",
+    "Content-Length": "30313",
+    "Content-Type": "text/html; charset=utf-8"
+  },
+  "_release": "e-tag:b7167d101",
+  "main": "index",
+  "_source": "https://github.com/imulus/retinajs/tree/master/src",
+  "_target": "*",
+  "_originalSource": "https://github.com/imulus/retinajs/tree/master/src",
+  "_direct": true
+}

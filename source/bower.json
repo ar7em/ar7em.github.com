@@ -1,0 +1,15 @@
+{
+  "name": "site",
+  "private": true,
+  "dependencies": {
+    "sass-bootstrap": "~3.0.0",
+    "modernizr": "~2.6.2",
+    "jquery": "~1.10.2"
+  },
+  "devDependencies": {
+    "malihu-custom-scrollbar-plugin": "~2.8.3",
+    "jquery.smooth-scroll": "~1.4.13",
+    "jquery-colorbox": "~1.4.36",
+    "retinajs": "https://github.com/imulus/retinajs.git#~1.2.0"
+  }
+}
