@@ -221,18 +221,15 @@ module.exports = function (grunt) {
         // additional tasks can operate on them
         useminPrepare: {
             options: {
+                root: '<%= yeoman.app %>',
                 dest: '<%= yeoman.dist %>'
             },
-            html: '.tmp/index.html'
+            html: '<%= yeoman.dist %>/index.html'
         },
 
         // Performs rewrites based on rev and the useminPrepare configuration
         usemin: {
-            options: {
-                assetsDirs: ['<%= yeoman.dist %>']
-            },
-            html: ['.tmp/{,*/}*.html'],
-            css: ['<%= yeoman.dist %>/styles/{,*/}*.css']
+            html: ['<%= yeoman.dist %>/{,*/}*.html']
         },
 
         // The following *-min tasks produce minified files in the dist folder
@@ -424,7 +421,7 @@ module.exports = function (grunt) {
         coffee: {
             dist: {
                 options: {
-                    sourceMap: true
+                    sourceMap: false
                 },
                 files: [{
                     expand: true,
