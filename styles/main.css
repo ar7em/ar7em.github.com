@@ -994,36 +994,38 @@ section.showcase p.additional {
   position: relative;
   border-left: 1px dotted #868686;
   padding-left: 1rem;
+  left: -1rem;
+  font-style: italic;
   color: #868686;
 }
 
-/* line 28, ../../app/styles/_showcase.scss */
+/* line 30, ../../app/styles/_showcase.scss */
 
 .carousel .item {
   text-align: center;
 }
 
-/* line 31, ../../app/styles/_showcase.scss */
+/* line 33, ../../app/styles/_showcase.scss */
 
 .carousel .item > a {
   display: inline-block;
   border: none;
 }
 
-/* line 35, ../../app/styles/_showcase.scss */
+/* line 37, ../../app/styles/_showcase.scss */
 
 .carousel .item > a:hover {
   border: none;
 }
 
-/* line 40, ../../app/styles/_showcase.scss */
+/* line 42, ../../app/styles/_showcase.scss */
 
 .carousel .item img {
   display: inline;
   max-height: 16.7rem;
 }
 
-/* line 46, ../../app/styles/_showcase.scss */
+/* line 48, ../../app/styles/_showcase.scss */
 
 .carousel .carousel-control {
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
@@ -1034,7 +1036,7 @@ section.showcase p.additional {
   border: none;
 }
 
-/* line 53, ../../app/styles/_showcase.scss */
+/* line 55, ../../app/styles/_showcase.scss */
 
 .carousel .carousel-control span {
   border: none;
@@ -1044,7 +1046,7 @@ section.showcase p.additional {
   margin-top: -2.5rem;
 }
 
-/* line 62, ../../app/styles/_showcase.scss */
+/* line 64, ../../app/styles/_showcase.scss */
 
 .carousel .left.carousel-control {
   left: auto;
@@ -1052,13 +1054,13 @@ section.showcase p.additional {
   background-image: none;
 }
 
-/* line 67, ../../app/styles/_showcase.scss */
+/* line 69, ../../app/styles/_showcase.scss */
 
 .carousel .left.carousel-control span {
   left: 0.3rem;
 }
 
-/* line 72, ../../app/styles/_showcase.scss */
+/* line 74, ../../app/styles/_showcase.scss */
 
 .carousel .right.carousel-control {
   right: auto;
@@ -1066,13 +1068,13 @@ section.showcase p.additional {
   background-image: none;
 }
 
-/* line 77, ../../app/styles/_showcase.scss */
+/* line 79, ../../app/styles/_showcase.scss */
 
 .carousel .right.carousel-control span {
   right: 0.3rem;
 }
 
-/* line 82, ../../app/styles/_showcase.scss */
+/* line 84, ../../app/styles/_showcase.scss */
 
 .carousel .carousel-indicators {
   position: relative;
@@ -1080,7 +1082,7 @@ section.showcase p.additional {
   margin-top: 1rem;
 }
 
-/* line 87, ../../app/styles/_showcase.scss */
+/* line 89, ../../app/styles/_showcase.scss */
 
 .carousel .carousel-indicators li {
   -webkit-transition: background-color 0.2s ease-out, border-color 0.2s ease-out;
@@ -1089,14 +1091,14 @@ section.showcase p.additional {
   background-color: white;
 }
 
-/* line 92, ../../app/styles/_showcase.scss */
+/* line 94, ../../app/styles/_showcase.scss */
 
 .carousel .carousel-indicators li.active {
   border-color: #428bca;
   background-color: #428bca;
 }
 
-/* line 97, ../../app/styles/_showcase.scss */
+/* line 99, ../../app/styles/_showcase.scss */
 
 .carousel .carousel-indicators li:hover {
   -webkit-transition: background-color 0s ease-out, border-color 0s ease-out;

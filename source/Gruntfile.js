@@ -120,7 +120,8 @@ module.exports = function (grunt) {
                     ]
                 }]
             },
-            server: '.tmp'
+            server: '.tmp',
+            partials: '<%= yeoman.dist %>/partials'
         },
 
         // Make sure code styles are up to par and there are no obvious mistakes
@@ -230,7 +231,7 @@ module.exports = function (grunt) {
             options: {
                 assetsDirs: ['<%= yeoman.dist %>']
             },
-            html: ['<%= yeoman.dist %>/{,*/}*.html'],
+            html: ['.tmp/{,*/}*.html'],
             css: ['<%= yeoman.dist %>/styles/{,*/}*.css']
         },
 
@@ -323,6 +324,7 @@ module.exports = function (grunt) {
                     dest: '<%= yeoman.dist %>',
                     src: [
                         '*.{ico,png,txt}',
+                        '*.vcf',
                         '.htaccess',
                         'images/{,*/}*.webp',
                         '{,*/}*.html',
@@ -487,7 +489,8 @@ module.exports = function (grunt) {
         'modernizr',
         //'rev',
         'usemin',
-        'htmlmin'
+        'htmlmin',
+        'clean:partials'
     ]);
 
     grunt.registerTask('default', [

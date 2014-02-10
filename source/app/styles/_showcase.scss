@@ -18,6 +18,8 @@ section.showcase {
 		position: relative;
 		border-left: 1px dotted $additional-font-color;
 		padding-left: 1rem;
+		left: -1rem;
+		font-style: italic;
 		color: $additional-font-color;
 	}
 }
