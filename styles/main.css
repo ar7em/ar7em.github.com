@@ -1,0 +1,1521 @@
+/* Dependencies */
+
+/* Global variables */
+
+/* Global mixins */
+
+/* Global styles */
+
+@font-face {
+  font-family: 'gentiumplus-i';
+  src: url("fonts/gentiumplus-i.eot");
+  src: url("fonts/gentiumplus-i.eot?#iefix") format("embedded-opentype"), url("fonts/gentiumplus-i.woff") format("woff"), url("fonts/gentiumplus-i.ttf") format("truetype");
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: 'gentiumplus-r';
+  src: url("fonts/gentiumplus-r.eot");
+  src: url("fonts/gentiumplus-r.eot?#iefix") format("embedded-opentype"), url("fonts/gentiumplus-r.woff") format("woff"), url("fonts/gentiumplus-r.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* line 143, ../../app/styles/main.scss */
+
+html {
+  font-size: 21px;
+}
+
+/* line 147, ../../app/styles/main.scss */
+
+body {
+  font-family: "gentiumplus-r", Georgia, serif;
+  color: #393939;
+}
+
+/* line 153, ../../app/styles/main.scss */
+
+body,
+html {
+  height: 100%;
+}
+
+/* line 157, ../../app/styles/main.scss */
+
+body > section {
+  position: relative;
+  z-index: 1;
+  background: #fff;
+  padding: 0 2rem;
+  margin: 2rem auto;
+  text-align: center;
+}
+
+/* line 166, ../../app/styles/main.scss */
+
+body > section + section:before {
+  content: "";
+  display: -moz-inline-stack;
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  zoom: 1;
+  *display: inline;
+  background-repeat: no-repeat;
+  display: block;
+  background-image: url('/images/sprites-s465235836e.png');
+  background-position: 0 -317px;
+  height: 47px;
+  width: 96px;
+  -webkit-background-size: 181px auto;
+  background-size: 181px auto;
+  position: relative;
+  width: 96px;
+  height: 47px;
+  margin: 4rem auto;
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2 / 1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
+  /* line 166, ../../app/styles/main.scss */
+
+  body > section + section:before {
+    background-image: url('/images/sprites2x-s0762ee0a9e.png');
+    background-position: 0 -317px;
+    height: 47px;
+    width: 96px;
+    /* treat the @2x retina sprite sheet as 50% wide for double resolution upon display */
+    -webkit-background-size: 181px auto;
+    background-size: 181px auto;
+  }
+}
+
+/* line 177, ../../app/styles/main.scss */
+
+body > section:last-child {
+  -webkit-box-shadow: 0 6px 8px 0 rgba(0, 0, 0, 0.8);
+  box-shadow: 0 6px 8px 0 rgba(0, 0, 0, 0.8);
+}
+
+/* line 182, ../../app/styles/main.scss */
+
+p,
+figcaption {
+  text-align: left;
+  font-size: 1rem;
+}
+
+/* line 187, ../../app/styles/main.scss */
+
+p,
+h2,
+.carousel {
+  max-width: 32rem;
+  margin: 1rem auto;
+}
+
+/* line 192, ../../app/styles/main.scss */
+
+a {
+  outline: none !important;
+}
+
+/* line 196, ../../app/styles/main.scss */
+
+a,
+a span {
+  -webkit-transition: color 0.2s ease-out;
+  -webkit-transition-delay: 0s;
+  transition: color 0.2s ease-out 0s;
+  font-family: Georgia, serif;
+  color: #428bca;
+  border-bottom: 1px solid rgba(66, 139, 202, 0.3);
+}
+
+/* line 202, ../../app/styles/main.scss */
+
+a:visited,
+a:visited span,
+a span:visited,
+a span:visited span {
+  text-decoration: none;
+  color: #6aa3d5;
+  border-bottom: 1px solid rgba(106, 163, 213, 0.3);
+}
+
+/* line 208, ../../app/styles/main.scss */
+
+a:active,
+a:hover,
+a:active span,
+a:hover span,
+a span:active,
+a span:hover,
+a span:active span,
+a span:hover span {
+  -webkit-transition: color 0s ease-out;
+  -webkit-transition-delay: 0s;
+  transition: color 0s ease-out 0s;
+  text-decoration: none;
+  color: #e8524b;
+  border-bottom: 1px solid rgba(232, 82, 75, 0.3);
+}
+
+/* line 216, ../../app/styles/main.scss */
+
+h1 {
+  font-family: "gentiumplus-r", Georgia, serif;
+  font-size: 4rem;
+  font-family: Georgia, serif;
+  letter-spacing: 0.19rem;
+}
+
+/* line 223, ../../app/styles/main.scss */
+
+h2 {
+  font-family: "gentiumplus-r", Georgia, serif;
+  font-size: 2rem;
+}
+
+/* line 228, ../../app/styles/main.scss */
+
+.contracted-letter-spacing {
+  letter-spacing: 0rem;
+}
+
+/* line 233, ../../app/styles/main.scss */
+
+.mCSB_buttonRight,
+.mCSB_buttonLeft {
+  border: none;
+}
+
+/* line 3, ../../app/styles/_welcome.scss */
+
+section.welcome .portrait {
+  background-repeat: no-repeat;
+  display: block;
+  background-image: url('/images/sprites-s465235836e.png');
+  background-position: 0 0;
+  height: 179px;
+  width: 181px;
+  -webkit-background-size: 181px auto;
+  background-size: 181px auto;
+  width: 181px;
+  margin: 0 auto;
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2 / 1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
+  /* line 3, ../../app/styles/_welcome.scss */
+
+  section.welcome .portrait {
+    background-image: url('/images/sprites2x-s0762ee0a9e.png');
+    background-position: 0 0;
+    height: 179px;
+    width: 181px;
+    /* treat the @2x retina sprite sheet as 50% wide for double resolution upon display */
+    -webkit-background-size: 181px auto;
+    background-size: 181px auto;
+  }
+}
+
+/* line 9, ../../app/styles/_welcome.scss */
+
+section.welcome .contacts {
+  -o-border-radius: 9px;
+  border-radius: 9px;
+  display: -moz-inline-stack;
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  zoom: 1;
+  *display: inline;
+  background: url("../images/envelope-bg.png");
+  background-position: 11.5% 0%;
+  max-width: 100%;
+  margin: 1rem auto;
+  padding: 1rem;
+}
+
+/* line 18, ../../app/styles/_welcome.scss */
+
+section.welcome .contacts address {
+  -o-border-radius: 6px;
+  border-radius: 6px;
+  background: #fff;
+  padding: 1rem;
+  margin: 0;
+  text-align: left;
+}
+
+/* line 25, ../../app/styles/_welcome.scss */
+
+section.welcome .contacts address i {
+  min-width: 1.5rem;
+  margin-right: 0.5rem;
+}
+
+/* line 30, ../../app/styles/_welcome.scss */
+
+section.welcome .contacts address ul {
+  list-style: none;
+  margin: 0;
+  padding: 0 0 0 0.2rem;
+  font-size: 1.5rem;
+}
+
+/* line 11, ../../../../../../../../var/lib/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/typography/lists/_bullets.scss */
+
+section.welcome .contacts address ul li {
+  list-style-image: none;
+  list-style-type: none;
+  margin-left: 0;
+}
+
+/* line 37, ../../app/styles/_welcome.scss */
+
+section.welcome .contacts address li {
+  margin: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2 / 1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
+  /* line 9, ../../app/styles/_welcome.scss */
+
+  section.welcome .contacts {
+    background-image: url("../images/envelope-bg@2x.png");
+  }
+}
+
+/* line 51, ../../app/styles/_welcome.scss */
+
+nav {
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  background: white;
+}
+
+/* line 56, ../../app/styles/_welcome.scss */
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  overflow: hidden;
+  *zoom: 1;
+}
+
+/* line 11, ../../../../../../../../var/lib/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/typography/lists/_bullets.scss */
+
+nav ul li {
+  list-style-image: none;
+  list-style-type: none;
+  margin-left: 0;
+}
+
+/* line 49, ../../../../../../../../var/lib/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/typography/lists/_inline-block-list.scss */
+
+nav ul li {
+  list-style-image: none;
+  list-style-type: none;
+  margin-left: 0;
+  display: -moz-inline-stack;
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  zoom: 1;
+  *display: inline;
+  white-space: nowrap;
+}
+
+/* line 105, ../../app/styles/main.scss */
+
+nav ul li:before {
+  content: "\00B7";
+  display: inline;
+  margin-left: 1rem;
+  margin-right: 1rem;
+  font-family: Georgia;
+}
+
+@media only screen and (max-width: 840px), print {
+  /* line 105, ../../app/styles/main.scss */
+
+  nav ul li:before {
+    margin-left: 0rem;
+  }
+}
+
+/* line 65, ../../app/styles/_welcome.scss */
+
+nav ul li:first-child:before {
+  display: none;
+}
+
+@media only screen and (max-width: 840px), print {
+  /* line 51, ../../app/styles/_welcome.scss */
+
+  nav {
+    text-align: left;
+  }
+
+  /* line 75, ../../app/styles/_welcome.scss */
+
+  nav ul li {
+    display: block;
+  }
+
+  /* line 80, ../../app/styles/_welcome.scss */
+
+  nav ul li:first-child:before {
+    display: inline;
+  }
+}
+
+/* line 2, ../../app/styles/_experience.scss */
+
+section.experience ul.jobs {
+  list-style: none;
+  display: -moz-inline-stack;
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  zoom: 1;
+  *display: inline;
+  text-align: left;
+  padding: 0;
+  max-width: 100%;
+  overflow: auto;
+  white-space: nowrap;
+  margin-top: 1rem;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+/* line 11, ../../../../../../../../var/lib/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/typography/lists/_bullets.scss */
+
+section.experience ul.jobs li {
+  list-style-image: none;
+  list-style-type: none;
+  margin-left: 0;
+}
+
+/* line 14, ../../app/styles/_experience.scss */
+
+section.experience ul.jobs li {
+  display: -moz-inline-stack;
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  zoom: 1;
+  *display: inline;
+  position: relative;
+  padding-left: 2.5rem;
+  padding-right: 0.8rem;
+  margin-top: 3rem;
+  height: 5rem;
+  text-align: left;
+}
+
+/* line 23, ../../app/styles/_experience.scss */
+
+section.experience ul.jobs li p {
+  margin: 0;
+}
+
+/* line 28, ../../app/styles/_experience.scss */
+
+section.experience ul.jobs .mai {
+  background-repeat: no-repeat;
+  display: block;
+  background-image: url('/images/sprites-s465235836e.png');
+  background-position: 0 -248px;
+  height: 69px;
+  width: 72px;
+  -webkit-background-size: 181px auto;
+  background-size: 181px auto;
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2 / 1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
+  /* line 28, ../../app/styles/_experience.scss */
+
+  section.experience ul.jobs .mai {
+    background-image: url('/images/sprites2x-s0762ee0a9e.png');
+    background-position: 0 -364px;
+    height: 69px;
+    width: 72px;
+    /* treat the @2x retina sprite sheet as 50% wide for double resolution upon display */
+    -webkit-background-size: 181px auto;
+    background-size: 181px auto;
+  }
+}
+
+/* line 32, ../../app/styles/_experience.scss */
+
+section.experience ul.jobs .atk {
+  background-repeat: no-repeat;
+  display: block;
+  background-image: url('/images/sprites-s465235836e.png');
+  background-position: 0 -179px;
+  height: 69px;
+  width: 65px;
+  -webkit-background-size: 181px auto;
+  background-size: 181px auto;
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2 / 1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
+  /* line 32, ../../app/styles/_experience.scss */
+
+  section.experience ul.jobs .atk {
+    background-image: url('/images/sprites2x-s0762ee0a9e.png');
+    background-position: 0 -179px;
+    height: 69px;
+    width: 65px;
+    /* treat the @2x retina sprite sheet as 50% wide for double resolution upon display */
+    -webkit-background-size: 181px auto;
+    background-size: 181px auto;
+  }
+}
+
+/* line 36, ../../app/styles/_experience.scss */
+
+section.experience ul.jobs .nine-cats {
+  background-repeat: no-repeat;
+  display: block;
+  background-image: url('/images/sprites-s465235836e.png');
+  background-position: 0 -364px;
+  height: 69px;
+  width: 93px;
+  -webkit-background-size: 181px auto;
+  background-size: 181px auto;
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2 / 1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
+  /* line 36, ../../app/styles/_experience.scss */
+
+  section.experience ul.jobs .nine-cats {
+    background-image: url('/images/sprites2x-s0762ee0a9e.png');
+    background-position: 0 -248px;
+    height: 69px;
+    width: 93px;
+    /* treat the @2x retina sprite sheet as 50% wide for double resolution upon display */
+    -webkit-background-size: 181px auto;
+    background-size: 181px auto;
+  }
+}
+
+/* line 40, ../../app/styles/_experience.scss */
+
+section.experience ul.jobs figure,
+section.experience ul.jobs figcaption,
+section.experience ul.jobs .start,
+section.experience ul.jobs .mai,
+section.experience ul.jobs .atk,
+section.experience ul.jobs .nine-cats {
+  display: -moz-inline-stack;
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  zoom: 1;
+  *display: inline;
+}
+
+/* line 44, ../../app/styles/_experience.scss */
+
+section.experience ul.jobs figure {
+  white-space: nowrap;
+  margin-right: 0.2rem;
+}
+
+/* line 49, ../../app/styles/_experience.scss */
+
+section.experience ul.jobs figcaption {
+  white-space: normal;
+}
+
+/* line 53, ../../app/styles/_experience.scss */
+
+section.experience ul.jobs .logo {
+  vertical-align: top;
+  margin-right: 0.5rem;
+  margin-top: 0.38rem;
+}
+
+/* line 59, ../../app/styles/_experience.scss */
+
+section.experience ul.jobs .start {
+  position: absolute;
+  font-size: 0.7rem;
+  left: 0;
+  top: -3rem;
+  color: #868686;
+  vertical-align: top;
+}
+
+/* line 67, ../../app/styles/_experience.scss */
+
+section.experience ul.jobs .start:before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 100%;
+  height: 2rem;
+  border-left: 1px dotted #868686;
+}
+
+/* line 4, ../../app/styles/_tree.scss */
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* line 6, ../../app/styles/_tree.scss */
+
+.tree ul {
+  padding-top: 20px;
+  position: relative;
+  transition: all 0.5s;
+  -webkit-transition: all 0.5s;
+}
+
+/* line 14, ../../app/styles/_tree.scss */
+
+.tree li {
+  float: left;
+  text-align: center;
+  list-style-type: none;
+  position: relative;
+  padding: 20px 10px 0 5px;
+}
+
+/*We will use ::before and ::after to draw the connectors*/
+
+/* line 23, ../../app/styles/_tree.scss */
+
+.tree li::before,
+.tree li::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 50%;
+  border-top: 1px solid #868686;
+  width: 50%;
+  height: 20px;
+}
+
+/* line 29, ../../app/styles/_tree.scss */
+
+.tree li::after {
+  right: auto;
+  left: 50%;
+  border-left: 1px solid #868686;
+}
+
+/*We need to remove left-right connectors from elements without 
+any siblings*/
+
+/* line 36, ../../app/styles/_tree.scss */
+
+.tree li:only-child::after,
+.tree li:only-child::before {
+  display: none;
+}
+
+/*Remove space from the top of single children*/
+
+/* line 41, ../../app/styles/_tree.scss */
+
+.tree li:only-child {
+  padding-top: 0;
+}
+
+/*Remove left connector from first child and 
+right connector from last child*/
+
+/* line 45, ../../app/styles/_tree.scss */
+
+.tree li:first-child::before,
+.tree li:last-child::after {
+  border: 0 none;
+}
+
+/*Adding back the vertical connector to the last nodes*/
+
+/* line 49, ../../app/styles/_tree.scss */
+
+.tree li:last-child::before {
+  border-right: 1px solid #868686;
+  border-radius: 0 5px 0 0;
+}
+
+/* line 55, ../../app/styles/_tree.scss */
+
+.tree li:first-child::after {
+  border-radius: 5px 0 0 0;
+}
+
+/*Time to add downward connectors from parents*/
+
+/* line 62, ../../app/styles/_tree.scss */
+
+.tree ul ul::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  border-left: 1px solid #868686;
+  width: 0;
+  height: 20px;
+}
+
+/* line 69, ../../app/styles/_tree.scss */
+
+.tree li a {
+  padding: 5px 10px;
+  text-decoration: none;
+  display: inline-block;
+  border-radius: 5px;
+}
+
+/* line 3, ../../app/styles/_skills.scss */
+
+.tree {
+  display: -moz-inline-stack;
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  zoom: 1;
+  *display: inline;
+  max-width: 100%;
+}
+
+/* line 8, ../../app/styles/_skills.scss */
+
+.tree li a {
+  -webkit-transition: opacity 0s ease-out;
+  -webkit-transition-delay: 0s;
+  transition: opacity 0s ease-out 0s;
+  border-bottom: none;
+}
+
+/* line 12, ../../app/styles/_skills.scss */
+
+.tree li a i {
+  display: -moz-inline-stack;
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  zoom: 1;
+  *display: inline;
+  font-size: 2.8rem;
+  color: #333333;
+}
+
+/* line 18, ../../app/styles/_skills.scss */
+
+.tree li a span {
+  display: block;
+  margin-top: 0.3rem;
+}
+
+/* line 24, ../../app/styles/_skills.scss */
+
+.tree li::before {
+  -webkit-transition: border-color 0.2s ease-out;
+  -webkit-transition-delay: 0s;
+  transition: border-color 0.2s ease-out 0s;
+}
+
+/* line 34, ../../app/styles/_skills.scss */
+
+.tree ul li a i,
+.tree ul li::after,
+.tree ul li::before,
+.tree ul::before,
+.tree ul ul::before {
+  -webkit-transition: opacity 0.2s ease-out;
+  -webkit-transition-delay: 0s;
+  transition: opacity 0.2s ease-out 0s;
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=90);
+  opacity: 0.9;
+}
+
+/* line 42, ../../app/styles/_skills.scss */
+
+.tree li a i {
+  -webkit-transition: opacity 0s ease-out;
+  -webkit-transition-delay: 0s;
+  transition: opacity 0s ease-out 0s;
+}
+
+/* line 51, ../../app/styles/_skills.scss */
+
+ul li a:hover i,
+.tree li a:hover + ul li a i,
+.tree li a:hover + ul li::after,
+.tree li a:hover + ul li::before,
+.tree li a:hover + ul::before,
+.tree li a:hover + ul ul::before {
+  -webkit-transition: opacity 0s ease-out;
+  -webkit-transition-delay: 0s;
+  transition: opacity 0s ease-out 0s;
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+  opacity: 1;
+}
+
+/* line 58, ../../app/styles/_skills.scss */
+
+.popover {
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  border-color: #ec746f;
+  color: #e8524b;
+}
+
+/* line 66, ../../app/styles/_skills.scss */
+
+.popover .arrow:after {
+  border-color: rgba(255, 255, 255, 0);
+}
+
+/* line 70, ../../app/styles/_skills.scss */
+
+.popover.right .arrow {
+  border-right-color: #e8524b;
+}
+
+/* line 74, ../../app/styles/_skills.scss */
+
+.popover.right .arrow:after {
+  border-right-color: white;
+}
+
+/* line 78, ../../app/styles/_skills.scss */
+
+.popover.top .arrow {
+  border-top-color: #e8524b;
+}
+
+/* line 82, ../../app/styles/_skills.scss */
+
+.popover.top .arrow:after {
+  border-top-color: white;
+}
+
+/* line 86, ../../app/styles/_skills.scss */
+
+.popover.bottom .arrow {
+  border-bottom-color: #e8524b;
+}
+
+/* line 90, ../../app/styles/_skills.scss */
+
+.popover.bottom .arrow:after {
+  border-bottom-color: white;
+}
+
+/* line 94, ../../app/styles/_skills.scss */
+
+.popover.left .arrow {
+  border-left-color: #e8524b;
+}
+
+/* line 98, ../../app/styles/_skills.scss */
+
+.popover.left .arrow:after {
+  border-left-color: white;
+}
+
+/* line 104, ../../app/styles/_skills.scss */
+
+.fa.fa-puzzle-piece {
+  margin-left: 0.8rem;
+}
+
+/* line 108, ../../app/styles/_skills.scss */
+
+.python-icon {
+  background-repeat: no-repeat;
+  display: block;
+  background-image: url('/images/sprites-s465235836e.png');
+  background-position: 0 -433px;
+  height: 64px;
+  width: 64px;
+  -webkit-background-size: 181px auto;
+  background-size: 181px auto;
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2 / 1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
+  /* line 108, ../../app/styles/_skills.scss */
+
+  .python-icon {
+    background-image: url('/images/sprites2x-s0762ee0a9e.png');
+    background-position: 0 -497px;
+    height: 64px;
+    width: 64px;
+    /* treat the @2x retina sprite sheet as 50% wide for double resolution upon display */
+    -webkit-background-size: 181px auto;
+    background-size: 181px auto;
+  }
+}
+
+/* line 112, ../../app/styles/_skills.scss */
+
+.css-icon {
+  background-repeat: no-repeat;
+  display: block;
+  background-image: url('/images/sprites-s465235836e.png');
+  background-position: 0 -497px;
+  height: 64px;
+  width: 64px;
+  -webkit-background-size: 181px auto;
+  background-size: 181px auto;
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2 / 1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
+  /* line 112, ../../app/styles/_skills.scss */
+
+  .css-icon {
+    background-image: url('/images/sprites2x-s0762ee0a9e.png');
+    background-position: 0 -433px;
+    height: 64px;
+    width: 64px;
+    /* treat the @2x retina sprite sheet as 50% wide for double resolution upon display */
+    -webkit-background-size: 181px auto;
+    background-size: 181px auto;
+  }
+}
+
+/* line 116, ../../app/styles/_skills.scss */
+
+.js-icon {
+  background-repeat: no-repeat;
+  display: block;
+  background-image: url('/images/sprites-s465235836e.png');
+  background-position: 0 -625px;
+  height: 64px;
+  width: 64px;
+  -webkit-background-size: 181px auto;
+  background-size: 181px auto;
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2 / 1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
+  /* line 116, ../../app/styles/_skills.scss */
+
+  .js-icon {
+    background-image: url('/images/sprites2x-s0762ee0a9e.png');
+    background-position: 0 -625px;
+    height: 64px;
+    width: 64px;
+    /* treat the @2x retina sprite sheet as 50% wide for double resolution upon display */
+    -webkit-background-size: 181px auto;
+    background-size: 181px auto;
+  }
+}
+
+/* line 120, ../../app/styles/_skills.scss */
+
+.html-icon {
+  background-repeat: no-repeat;
+  display: block;
+  background-image: url('/images/sprites-s465235836e.png');
+  background-position: 0 -561px;
+  height: 64px;
+  width: 64px;
+  -webkit-background-size: 181px auto;
+  background-size: 181px auto;
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2 / 1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
+  /* line 120, ../../app/styles/_skills.scss */
+
+  .html-icon {
+    background-image: url('/images/sprites2x-s0762ee0a9e.png');
+    background-position: 0 -561px;
+    height: 64px;
+    width: 64px;
+    /* treat the @2x retina sprite sheet as 50% wide for double resolution upon display */
+    -webkit-background-size: 181px auto;
+    background-size: 181px auto;
+  }
+}
+
+/* line 2, ../../app/styles/_showcase.scss */
+
+section.showcase article + article {
+  margin-top: 2rem;
+}
+
+/* line 5, ../../app/styles/_showcase.scss */
+
+section.showcase article + article:before {
+  content: "";
+  display: -moz-inline-stack;
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  zoom: 1;
+  *display: inline;
+  background-repeat: no-repeat;
+  display: block;
+  background-image: url('/images/sprites-s465235836e.png');
+  background-position: 0 -689px;
+  height: 6px;
+  width: 95px;
+  -webkit-background-size: 181px auto;
+  background-size: 181px auto;
+  position: relative;
+  width: 95px;
+  height: 6px;
+  margin: 2rem auto;
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2 / 1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
+  /* line 5, ../../app/styles/_showcase.scss */
+
+  section.showcase article + article:before {
+    background-image: url('/images/sprites2x-s0762ee0a9e.png');
+    background-position: 0 -689px;
+    height: 7px;
+    width: 96px;
+    /* treat the @2x retina sprite sheet as 50% wide for double resolution upon display */
+    -webkit-background-size: 181px auto;
+    background-size: 181px auto;
+  }
+}
+
+/* line 17, ../../app/styles/_showcase.scss */
+
+section.showcase p.additional {
+  position: relative;
+  border-left: 1px dotted #868686;
+  padding-left: 1rem;
+  color: #868686;
+}
+
+/* line 28, ../../app/styles/_showcase.scss */
+
+.carousel .item {
+  text-align: center;
+}
+
+/* line 31, ../../app/styles/_showcase.scss */
+
+.carousel .item > a {
+  display: inline-block;
+  border: none;
+}
+
+/* line 35, ../../app/styles/_showcase.scss */
+
+.carousel .item > a:hover {
+  border: none;
+}
+
+/* line 40, ../../app/styles/_showcase.scss */
+
+.carousel .item img {
+  display: inline;
+  max-height: 16.7rem;
+}
+
+/* line 46, ../../app/styles/_showcase.scss */
+
+.carousel .carousel-control {
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+  opacity: 1;
+  width: 2rem;
+  text-decoration: none;
+  font-size: 3rem;
+  border: none;
+}
+
+/* line 53, ../../app/styles/_showcase.scss */
+
+.carousel .carousel-control span {
+  border: none;
+  text-shadow: none;
+  position: absolute;
+  top: 50%;
+  margin-top: -2.5rem;
+}
+
+/* line 62, ../../app/styles/_showcase.scss */
+
+.carousel .left.carousel-control {
+  left: auto;
+  right: 100%;
+  background-image: none;
+}
+
+/* line 67, ../../app/styles/_showcase.scss */
+
+.carousel .left.carousel-control span {
+  left: 0.3rem;
+}
+
+/* line 72, ../../app/styles/_showcase.scss */
+
+.carousel .right.carousel-control {
+  right: auto;
+  left: 100%;
+  background-image: none;
+}
+
+/* line 77, ../../app/styles/_showcase.scss */
+
+.carousel .right.carousel-control span {
+  right: 0.3rem;
+}
+
+/* line 82, ../../app/styles/_showcase.scss */
+
+.carousel .carousel-indicators {
+  position: relative;
+  bottom: 0;
+  margin-top: 1rem;
+}
+
+/* line 87, ../../app/styles/_showcase.scss */
+
+.carousel .carousel-indicators li {
+  -webkit-transition: background-color 0.2s ease-out, border-color 0.2s ease-out;
+  transition: background-color 0.2s ease-out, border-color 0.2s ease-out;
+  border-color: #428bca;
+  background-color: white;
+}
+
+/* line 92, ../../app/styles/_showcase.scss */
+
+.carousel .carousel-indicators li.active {
+  border-color: #428bca;
+  background-color: #428bca;
+}
+
+/* line 97, ../../app/styles/_showcase.scss */
+
+.carousel .carousel-indicators li:hover {
+  -webkit-transition: background-color 0s ease-out, border-color 0s ease-out;
+  transition: background-color 0s ease-out, border-color 0s ease-out;
+  border-color: #e8524b;
+  background-color: #e8524b;
+}
+
+/*
+    Colorbox Core Style:
+    The following CSS is consistent between example themes and should not be altered.
+*/
+
+/* line 5, ../../app/styles/_colorbox.scss */
+
+#colorbox,
+#cboxOverlay,
+#cboxWrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+  overflow: hidden;
+}
+
+/* line 6, ../../app/styles/_colorbox.scss */
+
+#cboxWrapper {
+  max-width: none;
+}
+
+/* line 7, ../../app/styles/_colorbox.scss */
+
+#cboxOverlay {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+}
+
+/* line 8, ../../app/styles/_colorbox.scss */
+
+#cboxMiddleLeft,
+#cboxBottomLeft {
+  clear: left;
+}
+
+/* line 9, ../../app/styles/_colorbox.scss */
+
+#cboxContent {
+  position: relative;
+}
+
+/* line 10, ../../app/styles/_colorbox.scss */
+
+#cboxLoadedContent {
+  overflow: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+/* line 11, ../../app/styles/_colorbox.scss */
+
+#cboxTitle {
+  display: none;
+}
+
+/* line 12, ../../app/styles/_colorbox.scss */
+
+#cboxLoadingOverlay,
+#cboxLoadingGraphic {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* line 13, ../../app/styles/_colorbox.scss */
+
+#cboxPrevious,
+#cboxNext,
+#cboxClose,
+#cboxSlideshow {
+  cursor: pointer;
+}
+
+/* line 14, ../../app/styles/_colorbox.scss */
+
+.cboxPhoto {
+  float: left;
+  margin: auto;
+  border: 0;
+  display: block;
+  max-width: none;
+  -ms-interpolation-mode: bicubic;
+}
+
+/* line 15, ../../app/styles/_colorbox.scss */
+
+.cboxIframe {
+  width: 100%;
+  height: 100%;
+  display: block;
+  border: 0;
+}
+
+/* line 16, ../../app/styles/_colorbox.scss */
+
+#colorbox,
+#cboxContent,
+#cboxLoadedContent {
+  box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+}
+
+/* 
+    User Style:
+    Change the following styles to modify the appearance of Colorbox.  They are
+    ordered & tabbed in a way that represents the nesting of the generated HTML.
+*/
+
+/* line 23, ../../app/styles/_colorbox.scss */
+
+#cboxOverlay {
+  background: white;
+  background: rgba(0, 0, 0, 0.8);
+}
+
+/* line 28, ../../app/styles/_colorbox.scss */
+
+#colorbox {
+  outline: 0;
+}
+
+/* line 29, ../../app/styles/_colorbox.scss */
+
+#cboxTopLeft {
+  width: 21px;
+}
+
+/* line 30, ../../app/styles/_colorbox.scss */
+
+#cboxTopRight {
+  width: 21px;
+}
+
+/* line 31, ../../app/styles/_colorbox.scss */
+
+#cboxBottomLeft {
+  width: 21px;
+}
+
+/* line 32, ../../app/styles/_colorbox.scss */
+
+#cboxBottomRight {
+  width: 21px;
+}
+
+/* line 33, ../../app/styles/_colorbox.scss */
+
+#cboxMiddleLeft {
+  width: 21px;
+}
+
+/* line 34, ../../app/styles/_colorbox.scss */
+
+#cboxMiddleRight {
+  width: 21px;
+}
+
+/* line 35, ../../app/styles/_colorbox.scss */
+
+#cboxTopCenter {
+  height: 21px;
+}
+
+/* line 36, ../../app/styles/_colorbox.scss */
+
+#cboxBottomCenter {
+  height: 21px;
+}
+
+/* line 37, ../../app/styles/_colorbox.scss */
+
+#cboxContent {
+  background: #393939;
+  overflow: hidden;
+}
+
+/* line 38, ../../app/styles/_colorbox.scss */
+
+.cboxIframe {
+  background: #393939;
+}
+
+/* line 39, ../../app/styles/_colorbox.scss */
+
+#cboxError {
+  padding: 50px;
+  border: 1px solid #ccc;
+}
+
+/* line 40, ../../app/styles/_colorbox.scss */
+
+#cboxCurrent {
+  display: none;
+}
+
+/* line 41, ../../app/styles/_colorbox.scss */
+
+#cboxLoadingOverlay {
+  background: #393939;
+}
+
+/* line 42, ../../app/styles/_colorbox.scss */
+
+#cboxLoadingGraphic {
+  background: url(../images/loading.gif) no-repeat center center;
+}
+
+/* these elements are buttons, and may need to have additional styles reset to avoid unwanted base styles */
+
+/* line 45, ../../app/styles/_colorbox.scss */
+
+#cboxPrevious,
+#cboxNext,
+#cboxSlideshow,
+#cboxClose {
+  border: 0;
+  padding: 0;
+  margin: 0;
+  overflow: visible;
+  width: auto;
+  background: none;
+}
+
+/* avoid outlines on :active (mouseclick), but preserve outlines on :focus (tabbed navigating) */
+
+/* line 48, ../../app/styles/_colorbox.scss */
+
+#cboxPrevious:active,
+#cboxNext:active,
+#cboxSlideshow:active,
+#cboxClose:active {
+  outline: 0;
+}
+
+/* line 50, ../../app/styles/_colorbox.scss */
+
+#cboxSlideshow {
+  position: absolute;
+  bottom: 4px;
+  right: 30px;
+  color: #0092ef;
+}
+
+/* line 51, ../../app/styles/_colorbox.scss */
+
+#cboxPrevious {
+  display: block;
+  outline: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 100%;
+  text-indent: -9999px;
+}
+
+/* line 52, ../../app/styles/_colorbox.scss */
+
+#cboxNext {
+  display: block;
+  outline: none;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 50%;
+  height: 100%;
+  text-indent: -9999px;
+}
+
+/* line 53, ../../app/styles/_colorbox.scss */
+
+#cboxClose {
+  position: absolute;
+  top: 0;
+  right: -1rem;
+  width: 2rem;
+  height: 2rem;
+  text-indent: -9999px;
+}
+
+/* line 61, ../../app/styles/_colorbox.scss */
+
+#cboxClose:hover {
+  background-position: -25px -25px;
+}
+
+/*
+  The following fixes a problem where IE7 and IE8 replace a PNG's alpha transparency with a black fill
+  when an alpha filter (opacity change) is set on the element or ancestor element.  This style is not applied to or needed in IE9.
+  See: http://jacklmoore.com/notes/ie-transparency-problems/
+*/
+
+/* line 75, ../../app/styles/_colorbox.scss */
+
+.cboxIE #cboxTopLeft,
+.cboxIE #cboxTopCenter,
+.cboxIE #cboxTopRight,
+.cboxIE #cboxBottomLeft,
+.cboxIE #cboxBottomCenter,
+.cboxIE #cboxBottomRight,
+.cboxIE #cboxMiddleLeft,
+.cboxIE #cboxMiddleRight {
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#00FFFFFF,endColorstr=#00FFFFFF);
+}
+
+/* line 1, ../../app/styles/_footer.scss */
+
+footer {
+  position: relative;
+  margin-top: 4rem;
+  padding: 1rem 2rem;
+  color: white;
+  background: #393939;
+}
+
+/* line 8, ../../app/styles/_footer.scss */
+
+footer:before {
+  content: " ";
+  position: absolute;
+  left: 50%;
+  top: 0;
+  border-width: 1rem;
+  border-bottom-width: 0;
+  border-color: transparent;
+  border-top-color: #fff;
+  border-style: solid;
+  margin-left: -1rem;
+  width: 0;
+  height: 0;
+}
+
+/* line 23, ../../app/styles/_footer.scss */
+
+footer ul,
+footer li {
+  list-style: none;
+  max-width: 32rem;
+  text-align: left;
+  margin: 1rem auto;
+  font-size: 1rem;
+}
+
+/* line 11, ../../../../../../../../var/lib/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/typography/lists/_bullets.scss */
+
+footer ul li,
+footer li li {
+  list-style-image: none;
+  list-style-type: none;
+  margin-left: 0;
+}
+
+/* line 105, ../../app/styles/main.scss */
+
+footer ul li:before,
+footer li li:before {
+  content: "\00B7";
+  display: inline;
+  margin-left: -1rem;
+  margin-right: 1rem;
+  font-family: Georgia;
+}
+
+@media only screen and (max-width: 840px), print {
+  /* line 105, ../../app/styles/main.scss */
+
+  footer ul li:before,
+  footer li li:before {
+    margin-left: 0rem;
+  }
+}
+
+/* line 35, ../../app/styles/_footer.scss */
+
+footer a,
+footer a span {
+  color: #7eb0db;
+  border-bottom: 1px solid rgba(126, 176, 219, 0.3);
+}
+
+/* line 40, ../../app/styles/_footer.scss */
+
+footer a:visited,
+footer a:visited span,
+footer a span:visited,
+footer a span:visited span {
+  color: #a6c8e6;
+  border-bottom: 1px solid rgba(166, 200, 230, 0.3);
+}
+
+/* line 45, ../../app/styles/_footer.scss */
+
+footer a:active,
+footer a:hover,
+footer a:active span,
+footer a:hover span,
+footer a span:active,
+footer a span:hover,
+footer a span:active span,
+footer a span:hover span {
+  color: #e8524b;
+  border-bottom: 1px solid rgba(232, 82, 75, 0.3);
+}
+
+/* line 51, ../../app/styles/_footer.scss */
+
+footer h2 {
+  text-align: center;
+}

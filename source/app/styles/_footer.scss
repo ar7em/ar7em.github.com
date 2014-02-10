@@ -1,7 +1,7 @@
 footer {
 	position: relative;
 	margin-top: 4rem;
-	padding: 2rem 2rem 1rem 2rem;
+	padding: 1rem 2rem;
 	color: white;
 	background: $font-color;
 
@@ -46,5 +46,9 @@ footer {
 	        color: $red;
 	        border-bottom: 1px solid rgba($red, 0.3);
 	    }
+	}
+
+	h2 {
+		text-align: center;
 	}
 }

@@ -238,9 +238,10 @@ module.exports = function (grunt) {
         imagemin: {
             dist: {
                 files: [{
+                    dot: true,
                     expand: true,
                     cwd: '<%= yeoman.app %>/images',
-                    src: '{,*/}*.{gif,jpeg,jpg,png}',
+                    src: '{,*/}*{,*/}*.{gif,jpeg,jpg,png}',
                     dest: '<%= yeoman.dist %>/images'
                 }]
             }
@@ -248,6 +249,7 @@ module.exports = function (grunt) {
         svgmin: {
             dist: {
                 files: [{
+                    dot: true,
                     expand: true,
                     cwd: '<%= yeoman.app %>/images',
                     src: '{,*/}*.svg',
@@ -325,8 +327,26 @@ module.exports = function (grunt) {
                         'images/{,*/}*.webp',
                         '{,*/}*.html',
                         'styles/fonts/{,*/}*.*',
-                        'bower_components/sass-bootstrap/fonts/*.*'
+                        'bower_components/**',
                     ]
+                }, {
+                    expand: true,
+                    dot: true,
+                    cwd: '.tmp/styles/',
+                    dest: '<%= yeoman.dist %>/styles',
+                    src: '{,*/}*.css'
+                }, {
+                    expand: true,
+                    dot: true,
+                    cwd: '.tmp/scripts/',
+                    dest: '<%= yeoman.dist %>/scripts',
+                    src: '{,*/}*.js'
+                }, {
+                    expand: true,
+                    dot: true,
+                    cwd: '<%= yeoman.app %>/scripts/',
+                    dest: '<%= yeoman.dist %>/scripts',
+                    src: '{,*/}*.js'
                 }]
             },
             styles: {
@@ -343,7 +363,7 @@ module.exports = function (grunt) {
                     dot: true,
                     cwd: '<%= yeoman.app %>/images',
                     dest: '.tmp/images/',
-                    src: '*.png'
+                    src: '{,*/}*.{gif,jpeg,jpg,png}'
                 }]
             }
         },
@@ -376,12 +396,9 @@ module.exports = function (grunt) {
                 'coffee:dist'
             ],
             dist: [
-                'compass',
                 'copy:styles',
                 'copy:coffee',
                 'coffee:dist',
-                'imagemin',
-                'svgmin'
             ]
         },
 
@@ -457,7 +474,10 @@ module.exports = function (grunt) {
     grunt.registerTask('build', [
         'clean:dist',
         'useminPrepare',
+        'compass',
         'concurrent:dist',
+        'imagemin:dist',
+        'svgmin:dist',
         'jade',
         'autoprefixer',
         //'concat',
@@ -465,7 +485,7 @@ module.exports = function (grunt) {
         //'uglify',
         'copy:dist',
         'modernizr',
-        'rev',
+        //'rev',
         'usemin',
         'htmlmin'
     ]);
