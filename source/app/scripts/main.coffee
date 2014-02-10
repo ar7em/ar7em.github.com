@@ -25,7 +25,6 @@ $(document).ready ->
 	$(".skills a").popover
 		animation: 0
 		trigger: 'click hover'
-		container: "body"
 
 	# Initialize lightbox for showcase
 	$(".showcase .carousel").each ->
