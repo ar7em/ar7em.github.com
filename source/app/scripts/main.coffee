@@ -25,7 +25,7 @@ $(document).ready ->
 	$(".skills a").popover
 		animation: 0
 		trigger: 'click hover'
-		container: ".mCSB_container"
+		container: ".skills .tree .mCSB_container"
 
 	# Initialize lightbox for showcase
 	$(".showcase .carousel").each ->
@@ -35,3 +35,7 @@ $(document).ready ->
 			close: ""
 			next: ""
 			previous: ""
+
+
+	# Initialize fastclick to remove click delay for mobile browsers
+	FastClick.attach document.body

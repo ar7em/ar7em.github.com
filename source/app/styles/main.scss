@@ -24,7 +24,9 @@ $header-font-size: 2.67rem;
 
 /* Global mixins */
 $sprites: sprite-map("sprites/*.png");
+$sprites-spacing: 2px;
 $sprites2x: sprite-map("sprites2x/*.png");
+$sprites2x-spacing: 4px;
 
 @mixin sprite-background($name) {
     background-repeat: no-repeat;

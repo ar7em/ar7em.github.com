@@ -315,7 +315,8 @@ module.exports = function (grunt) {
                         '<%= yeoman.dist %>/bower_components/sass-bootstrap/js/carousel.js',
                         '<%= yeoman.dist %>/bower_components/sass-bootstrap/js/scrollspy.js',
                         '<%= yeoman.dist %>/bower_components/sass-bootstrap/js/collapse.js',
-                        '<%= yeoman.dist %>/bower_components/sass-bootstrap/js/tab.js'
+                        '<%= yeoman.dist %>/bower_components/sass-bootstrap/js/tab.js',
+                        '<%= yeoman.dist %>/bower_components/fastclick/lib/fastclick.js',
                     ],
                     '<%= yeoman.dist %>/scripts/main.js': [
                         '<%= yeoman.dist %>/scripts/smoothscroll.js',

@@ -10,6 +10,7 @@
     "malihu-custom-scrollbar-plugin": "~2.8.3",
     "jquery.smooth-scroll": "~1.4.13",
     "jquery-colorbox": "~1.4.36",
-    "retinajs": "https://github.com/imulus/retinajs.git#~1.2.0"
+    "retinajs": "https://github.com/imulus/retinajs.git#~1.2.0",
+    "fastclick": "~0.6.11"
   }
 }
