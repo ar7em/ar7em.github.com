@@ -47,7 +47,7 @@ $sprites2x: sprite-map("sprites2x/*.png", $spacing: 10px);
 
         /* treat the @2x retina sprite sheet as 50% wide for double resolution upon display */
         @include background-size(ceil(image-width(sprite-path($sprites2x)) / 2) auto);
-    }   
+    }
 
     @include background-size(image-width(sprite-path($sprites)) auto);
 }
@@ -84,7 +84,7 @@ $small-height: 500px;
 }
 
 @mixin bg-cover($image, $attachment: fixed) {
-    background: url($image) no-repeat center top $attachment; 
+    background: url($image) no-repeat center top $attachment;
     background-size: 100% auto;
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -116,7 +116,7 @@ $small-height: 500px;
 }
 
 %shadowed {
-    @include single-box-shadow(rgba(0,0,0,0.6), 0, 1px, 4px, 0, false);
+    @include single-box-shadow(0, 1px, 4px, 0, rgba(0,0,0,0.6), false);
 }
 
 /* Global styles */
@@ -175,7 +175,7 @@ body > section {
     }
 
     &:last-child {
-        @include single-box-shadow(rgba(0,0,0,0.8), 0, 6px, 8px, 0, false);
+        @include single-box-shadow(0, 6px, 8px, 0, rgba(0,0,0,0.8), false);
     }
 }
 
@@ -189,7 +189,7 @@ p, h2, .carousel {
     margin: 1rem auto;
 }
 
-a {
+a, a:focused {
     outline: none !important;
 }
 

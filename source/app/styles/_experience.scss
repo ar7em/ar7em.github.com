@@ -37,7 +37,11 @@ section.experience {
 			@include sprite-background("nine-cats");
 		}
 
-		figure, figcaption, .start, .mai, .atk, .nine-cats {
+    .parallels {
+			@include sprite-background("parallels");
+		}
+
+		figure, figcaption, .start, .mai, .atk, .nine-cats, .parallels {
 			@include inline-block;
 		}
 
@@ -51,7 +55,7 @@ section.experience {
 		}
 
 		.logo {
-			vertical-align: top; 
+			vertical-align: top;
 			margin-right: 0.5rem;
 			margin-top: 0.38rem;
 		}
